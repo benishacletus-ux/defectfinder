@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Property inspection tips, construction guidance, building defect awareness and maintenance insights from DefectFinder.in in Hyderabad.">
+  <meta name="theme-color" content="#0a2540">
+  <title>Blog & Insights | DefectFinder.in</title>
+  <link rel="canonical" href="https://defectfinder.in/blog.html">
+  <link rel="icon" href="assets/favicon.webp" type="image/webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a2540;
+      --navy-dark: #071c33;
+      --amber: #f7b500;
+      --teal: #1fb5ad;
+      --wa: #22c55e;
+      --text: #14304d;
+      --muted: #5f7186;
+      --border: #dfe8f1;
+      --soft: #f8fafc;
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: "Poppins", "Segoe UI", Arial, sans-serif; color: var(--text); background: #fff; line-height: 1.7; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; height: auto; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; }
+    .container { width: min(1180px, 92%); margin: auto; }
+    .ic { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+    .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+    .eyebrow.center { justify-content: center; }
+    .eyebrow::before { content: ""; width: 26px; height: 3px; border-radius: 3px; background: var(--amber); }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 24px; border-radius: 50px; font: 600 14px "Poppins", sans-serif; border: 2px solid transparent; transition: .25s; white-space: nowrap; }
+    .btn .ic { font-size: 17px; }
+    .btn-amber { background: var(--amber); color: var(--navy-dark); }
+    .btn-amber:hover { background: #ffc933; transform: translateY(-2px); }
+    .btn-outline { background: rgba(10,37,64,.55); color: #fff; border-color: var(--teal); }
+    .btn-outline:hover { background: var(--teal); transform: translateY(-2px); }
+    .btn-green { background: var(--wa); color: #fff; }
+    .btn-green:hover { background: #16a34a; transform: translateY(-2px); }
+
+    .header { background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+    .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo-img { height: 56px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { color: var(--navy); font-size: 13.5px; font-weight: 500; padding: 8px 0; border-bottom: 2px solid transparent; transition: .25s; }
+    .nav-links a:hover, .nav-links a.active { border-color: var(--amber); color: var(--navy); }
+    .nav-cta { padding: 11px 20px; font-size: 13px; border: none; }
+    .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 42px; height: 42px; border-radius: 8px; font-size: 22px; }
+
+    .page-hero { position: relative; background: var(--navy) url('assets/hero.webp') right center / cover no-repeat; color: #fff; padding: 95px 0; }
+    .page-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,28,51,.96) 0%, rgba(7,28,51,.83) 55%, rgba(7,28,51,.45) 100%); }
+    .page-hero .container { position: relative; }
+    .breadcrumbs { font-size: 12.5px; color: rgba(255,255,255,.75); margin-bottom: 18px; }
+    .breadcrumbs a:hover { color: var(--amber); }
+    .breadcrumbs span { color: var(--amber); font-weight: 600; }
+    .page-hero h1 { font-size: clamp(35px, 5vw, 54px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; }
+    .page-hero p { margin-top: 16px; max-width: 600px; font-size: 15px; color: rgba(255,255,255,.88); }
+
+    .section { padding: 80px 0; }
+    .section-heading { text-align: center; margin-bottom: 36px; }
+    .section-heading .eyebrow { justify-content: center; }
+    .section-heading h2 { font-size: clamp(25px, 3vw, 34px); color: var(--navy); margin-bottom: 10px; letter-spacing: -0.5px; }
+    .section-heading p { font-size: 14px; color: var(--muted); }
+
+    .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+    .filter-btn { background: #fff; border: 1px solid var(--border); color: var(--navy); font: 600 12.5px "Poppins", sans-serif; padding: 9px 18px; border-radius: 40px; transition: .25s; }
+    .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+    .blog-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: 0 6px 20px rgba(10,37,64,.05); transition: .3s; display: flex; flex-direction: column; }
+    .blog-card:hover { box-shadow: 0 15px 35px rgba(10,37,64,.12); border-color: var(--teal); }
+    .blog-card.hide { display: none; }
+    .blog-thumb { height: 205px; background: var(--soft); overflow: hidden; }
+    .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .blog-card:hover .blog-thumb img { transform: scale(1.04); }
+    .blog-content { padding: 23px 21px 25px; flex: 1; display: flex; flex-direction: column; }
+    .blog-meta { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; color: var(--teal); margin-bottom: 11px; }
+    .blog-content h3 { font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 12px; }
+    .blog-content > p { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; flex: 1; }
+
+    .read-toggle, .read-link { display: inline-flex; align-items: center; gap: 9px; background: var(--navy); color: #fff; padding: 11px 18px; border: 0; border-radius: 6px; font: 600 12.5px "Poppins", sans-serif; transition: .25s; align-self: flex-start; }
+    .read-toggle:hover, .read-link:hover { background: var(--teal); transform: translateY(-2px); }
+    .read-toggle .arrow { transition: transform .3s; display: inline-block; }
+    .read-toggle[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+
+    .blog-article { display: none; margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--border); animation: articleOpen .35s ease; }
+    .blog-article.open { display: block; }
+    @keyframes articleOpen { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .blog-article h4 { color: var(--navy); font-size: 16px; margin: 20px 0 8px; }
+    .blog-article p { font-size: 13.5px; color: var(--muted); margin-bottom: 13px; }
+    .blog-article ul { list-style: disc; padding-left: 20px; margin: 12px 0 18px; }
+    .blog-article li { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    .article-note { background: var(--soft); border-left: 3px solid var(--amber); padding: 14px; border-radius: 5px; margin: 18px 0; font-size: 13px; color: var(--navy); }
+    .article-note strong { color: var(--navy-dark); }
+    .article-contact { display: inline-flex; align-items: center; gap: 7px; color: var(--wa); font-size: 13px; font-weight: 700; margin-top: 8px; transition: .2s; }
+    .article-contact:hover { color: var(--navy); gap: 12px; }
+
+    .cta { position: relative; background: var(--navy-dark) url('assets/hyderabad.webp') right center / cover no-repeat; color: #fff; padding: 60px 0; overflow: hidden; }
+    .cta::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,28,51,.98) 0%, rgba(7,28,51,.88) 55%, rgba(7,28,51,.4) 100%); }
+    .cta-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    .cta .eyebrow { color: var(--amber); }
+    .cta h2 { font-size: clamp(24px, 2.8vw, 32px); line-height: 1.25; letter-spacing: -0.5px; }
+    .cta p { color: rgba(255,255,255,.85); font-size: 13.5px; margin-top: 8px; }
+    .cta-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .footer { background: linear-gradient(rgba(255,255,255,.94), rgba(255,255,255,.94)), url('assets/footer-bg.webp') center / cover no-repeat; color: var(--text); padding: 60px 0 20px; border-top: 1px solid var(--border); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand .logo-img { height: 75px; margin-bottom: 18px; }
+    .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 340px; }
+    .footer-col h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 20px; position: relative; display: inline-block; }
+    .footer-col h4::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 24px; height: 2px; background: var(--amber); border-radius: 2px; }
+    .footer-nav { display: flex; flex-direction: column; gap: 12px; }
+    .footer-nav a { font-size: 13px; color: var(--muted); font-weight: 500; transition: .2s; }
+    .footer-nav a:hover { color: var(--teal); transform: translateX(4px); }
+    .footer-contact { display: flex; flex-direction: column; gap: 14px; }
+    .footer-contact a { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); transition: .2s; }
+    .footer-contact a:hover { color: var(--teal); }
+    .footer-contact .ic { font-size: 16px; color: var(--teal); margin-top: 2px; }
+    .footer-bottom { border-top: 1px solid rgba(10,37,64,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .footer-tag { font-size: 12.5px; font-weight: 700; color: var(--navy); }
+    .footer-copy { font-size: 11.5px; color: var(--muted); }
+
+    .fab-wrap { position: fixed; right: 20px; bottom: 20px; z-index: 1500; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+    .fab { display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 50px; font-weight: 700; font-size: 13px; color: #fff; box-shadow: 0 10px 26px rgba(0,0,0,.25); transition: .25s; }
+    .fab:hover { transform: translateY(-3px); }
+    .fab .ic { font-size: 19px; }
+    .fab.wa { background: var(--wa); }
+    .fab.call { background: var(--navy); }
+
+    dialog { border: 0; border-radius: 16px; padding: 0; width: min(640px, 94%); margin: auto; box-shadow: 0 30px 80px rgba(0,0,0,.35); max-height: 92vh; }
+    dialog::backdrop { background: rgba(7,28,51,.65); backdrop-filter: blur(3px); }
+    .modal-head { background: var(--navy); color: #fff; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--amber); }
+    .modal-head h3 { font-size: 18px; }
+    .modal-head p { font-size: 12px; color: rgba(255,255,255,.75); }
+    .modal-close { background: transparent; border: 0; color: #fff; font-size: 26px; line-height: 1; }
+    .booking-form { padding: 24px 26px 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 12.5px; font-weight: 600; color: var(--navy); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; font-size: 13.5px; outline: none; transition: .2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(247,181,0,.18); }
+    .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
+    .form-note { grid-column: 1 / -1; text-align: center; font-size: 11px; color: var(--muted); }
+
+    @media (max-width: 960px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; border-bottom: 1px solid var(--border); flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 5% 20px; display: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+      .nav-links.show { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: inline-block; }
+      .footer-top { grid-template-columns: 1fr; gap: 30px; }
+      .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
+    }
+    @media (max-width: 620px) {
+      .section { padding: 55px 0; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .booking-form { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: auto; }
+      .cta-inner { text-align: center; justify-content: center; }
+      .cta-buttons { justify-content: center; }
+      .fab span { display: none; }
+      .fab { padding: 13px; }
+      .filter-btn { padding: 7px 14px; font-size: 11.5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; animation: none !important; } }
+  </style>
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" fill="currentColor" stroke="none"/></symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container nav-inner">
+      <a href="index.html" aria-label="DefectFinder.in home">
+        <img src="assets/logo.webp" alt="DefectFinder.in" class="logo-img" width="140" height="56">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button type="button" class="btn btn-amber nav-cta" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">Home</a> / <span>Blog</span></div>
+        <h1>Property Insights &amp; Tips</h1>
+        <p>Property inspection guides, construction tips, building defect awareness and maintenance advice — all in one place.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow center">Our Blog</div>
+          <h2>Explore Our Latest Articles</h2>
+          <p>Filter by topic and click to read.</p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filter articles by topic">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Topics</button>
+          <button type="button" class="filter-btn" data-filter="inspection" role="tab" aria-selected="false">Inspection</button>
+          <button type="button" class="filter-btn" data-filter="construction" role="tab" aria-selected="false">Construction</button>
+          <button type="button" class="filter-btn" data-filter="defects" role="tab" aria-selected="false">Defect Awareness</button>
+          <button type="button" class="filter-btn" data-filter="maintenance" role="tab" aria-selected="false">Maintenance</button>
+        </div>
+
+        <div class="blog-grid">
+
+          <!-- BLOG 1 – INSPECTION (Links to new page) -->
+          <article class="blog-card" data-category="inspection">
+            <div class="blog-thumb">
+              <img src="assets/blog-1.webp" data-fallback="assets/homeinspection.webp" alt="Home inspection before buying" width="400" height="205" loading="lazy">
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">PROPERTY GUIDES · 5 MIN READ</div>
+              <h3>Why a Home Inspection Matters Before You Buy</h3>
+              <p>Understand how a professional inspection can reveal concerns and help you make a more informed property decision.</p>
+              <!-- Changed to a standard link opening in a new page -->
+              <a href="blog-home-inspection.html" target="_blank" rel="noopener" class="read-link">
+                Read Full Article <svg class="ic"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">Get In Touch</div>
+          <h2>Need professional advice for your property?</h2>
+          <p>Our inspection team can help you assess your concerns.</p>
+        </div>
+        <div class="cta-buttons">
+          <a class="btn btn-green" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp Our Team</a>
+          <a class="btn btn-outline" href="contact.html">Contact Us <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col footer-brand">
+          <a href="index.html" aria-label="DefectFinder.in home">
+            <img src="assets/logo.webp" alt="DefectFinder.in" class="logo-img" width="188" height="75" loading="lazy">
+          </a>
+          <p>Independent property inspection, home renovation, and technical guidance for NRI and local property owners in Hyderabad.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-nav" aria-label="Footer Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact">
+            <a href="tel:+971559610399"><svg class="ic"><use href="#i-phone"/></svg>+971 55 961 0399</a>
+            <a href="https://wa.me/916360707285?text=Hello%20DefectFinder!" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> +91 63607 07285</a>
+            <a href="contact.html"><svg class="ic"><use href="#i-pin"/></svg> Hyderabad, Telangana</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-tag">Better Inspections. Safer Investments.</span>
+        <p class="footer-copy">© <span id="currentYear"></span> DefectFinder.Pvt.Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fab-wrap">
+    <a class="fab call" href="tel:+971559610399" aria-label="Call DefectFinder"><svg class="ic"><use href="#i-phone"/></svg><span>Call Now</span></a>
+    <a class="fab wa" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+
+  <dialog id="bookModal" aria-labelledby="bookTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="bookTitle">Book your property inspection</h3>
+        <p>Your request opens in WhatsApp so our team can reply quickly.</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+    </div>
+    <form class="booking-form" id="inspectionForm">
+      <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name"></div>
+      <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
+      <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email"></div>
+      <div class="form-group">
+        <label for="inspectionType">Service *</label>
+        <select id="inspectionType" name="inspectionType" required>
+          <option value="">Select a service</option>
+          <option value="Home Inspection">Home Inspection</option>
+          <option value="Building Defect Report">Building Defect Report</option>
+          <option value="Water Leak Detection">Water Leak Detection</option>
+          <option value="Electrical Inspection">Electrical Inspection</option>
+          <option value="Plumbing Inspection">Plumbing Inspection</option>
+          <option value="Roof Inspection">Roof Inspection</option>
+          <option value="Thermal Scanning">Thermal Scanning</option>
+          <option value="Maintenance Consultation">Maintenance Consultation</option>
+          <option value="Pre-Purchase Inspection">Pre-Purchase Inspection</option>
+          <option value="New Flat Handover Inspection">New Flat Handover Inspection</option>
+          <option value="Tenant Move-In / Move-Out Check">Tenant Move-In / Move-Out Check</option>
+          <option value="Home Renovation">Home Renovation</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="propertyType">Property Type *</label>
+        <select id="propertyType" name="propertyType" required>
+          <option value="">Select property type</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Villa">Villa</option>
+          <option value="2 BHK">2 BHK</option>
+          <option value="3 BHK">3 BHK</option>
+          <option value="4 BHK / Villa">4 BHK / Villa</option>
+          <option value="Commercial Property">Commercial Property</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="date">Preferred Date</label><input type="date" id="date" name="date"></div>
+      <div class="form-group full"><label for="location">Property Location *</label><input type="text" id="location" name="location" placeholder="Enter property location" required autocomplete="address-level2"></div>
+      <div class="form-group full"><label for="message">Additional Details</label><textarea id="message" name="message" rows="3" placeholder="Tell us about your requirements..."></textarea></div>
+      <button type="submit" class="btn btn-amber">Submit Inspection Request <svg class="ic"><use href="#i-arrow"/></svg></button>
+      <p class="form-note">Your information will be used only to respond to your enquiry.</p>
+    </form>
+  </dialog>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var BOOKING_WA = "971559610399";
+
+      var menuToggle = document.getElementById("menuToggle");
+      var navLinks = document.getElementById("navLinks");
+      var modal = document.getElementById("bookModal");
+      var form = document.getElementById("inspectionForm");
+      var dateInput = document.getElementById("date");
+
+      function closeMenu() {
+        if (!navLinks) return;
+        navLinks.classList.remove("show");
+        if (menuToggle) {
+          menuToggle.innerHTML = "☰";
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+        }
+      }
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+          var open = !navLinks.classList.contains("show");
+          navLinks.classList.toggle("show", open);
+          menuToggle.innerHTML = open ? "✕" : "☰";
+          menuToggle.setAttribute("aria-expanded", String(open));
+          menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+        });
+        navLinks.querySelectorAll("a").forEach(function (l) {
+          l.addEventListener("click", closeMenu);
+        });
+      }
+
+      if (dateInput) {
+        var t = new Date();
+        var pad = function (n) { return String(n).padStart(2, "0"); };
+        dateInput.min = t.getFullYear() + "-" + pad(t.getMonth() + 1) + "-" + pad(t.getDate());
+      }
+
+      function safeShow(dlg) {
+        if (!dlg || typeof dlg.showModal !== "function") return;
+        if (dlg.open) return;
+        document.querySelectorAll("dialog[open]").forEach(function (d) {
+          if (d !== dlg) d.close();
+        });
+        dlg.showModal();
+      }
+
+      document.querySelectorAll("[data-book]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          closeMenu();
+          safeShow(modal);
+        });
+      });
+
+      if (modal) {
+        modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
+        modal.querySelectorAll("[data-close]").forEach(function (b) {
+          b.addEventListener("click", function () { modal.close(); });
+        });
+      }
+
+      document.querySelectorAll(".read-toggle").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var article = button.nextElementSibling;
+          if (!article) return;
+          var isOpen = article.classList.contains("open");
+          article.classList.toggle("open", !isOpen);
+          button.setAttribute("aria-expanded", String(!isOpen));
+          var label = button.querySelector(".button-text");
+          var arrow = button.querySelector(".arrow");
+          if (label) label.textContent = isOpen ? "Read Full Article" : "Read Less";
+          if (arrow) arrow.textContent = isOpen ? "↓" : "↑";
+        });
+      });
+
+      var filterBtns = document.querySelectorAll(".filter-btn");
+      var cards = document.querySelectorAll(".blog-card");
+      filterBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          var cat = b.dataset.filter;
+          cards.forEach(function (c) {
+            var show = cat === "all" || c.dataset.category === cat;
+            c.classList.toggle("hide", !show);
+          });
+          filterBtns.forEach(function (x) {
+            var on = x === b;
+            x.classList.toggle("active", on);
+            x.setAttribute("aria-selected", String(on));
+          });
+        });
+      });
+
+      document.querySelectorAll("img[data-fallback]").forEach(function (img) {
+        img.addEventListener("error", function onError() {
+          img.removeEventListener("error", onError);
+          var fb = img.getAttribute("data-fallback");
+          if (fb && img.src !== fb) img.src = fb;
+        }, { once: true });
+      });
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          var d = new FormData(form);
+          var msg =
+            "Hello DefectFinder! I would like to book an inspection.\n\n" +
+            "*Name:* " + (d.get("name") || "") + "\n" +
+            "*Phone:* " + (d.get("phone") || "") + "\n" +
+            "*Email:* " + (d.get("email") || "Not provided") + "\n" +
+            "*Service:* " + (d.get("inspectionType") || "") + "\n" +
+            "*Property Type:* " + (d.get("propertyType") || "") + "\n" +
+            "*Preferred Date:* " + (d.get("date") || "Flexible") + "\n" +
+            "*Location:* " + (d.get("location") || "") + "\n" +
+            "*Additional Details:* " + (d.get("message") || "No additional details");
+          window.open("https://wa.me/" + BOOKING_WA + "?text=" + encodeURIComponent(msg), "_blank");
+          form.reset();
+          modal.close();
+        });
+      }
+
+      var yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
