@@ -9,7 +9,6 @@
   <link rel="canonical" href="https://defectfinder.in/services.html">
   <link rel="icon" href="assets/favicon.webp" type="image/webp">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DefectFinder.in">
   <meta property="og:title" content="Our Services | DefectFinder.in">
@@ -18,7 +17,6 @@
   <meta property="og:image" content="https://defectfinder.in/assets/hero.webp">
   <meta property="og:image:alt" content="DefectFinder property inspection services">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Services | DefectFinder.in">
   <meta name="twitter:description" content="Professional property inspection services for NRI and local owners in Hyderabad.">
@@ -28,7 +26,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,23 +112,22 @@
     .section-heading h2 { color: var(--navy); font-size: clamp(27px, 4vw, 38px); font-weight: 700; line-height: 1.25; margin-bottom: 14px; letter-spacing: -0.5px; }
     .section-heading p { color: var(--muted); font-size: 14px; }
 
-    /* SERVICE CARDS */
-    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    /* UPDATED: Bigger service cards (3 per row instead of 4) */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
     .service-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .3s; box-shadow: 0 6px 20px rgba(10,37,64,.05); display: flex; flex-direction: column; }
     .service-card:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(10,37,64,.13); border-color: var(--teal); }
-    .service-image { position: relative; height: 160px; overflow: hidden; background: #e9eef3; }
+    .service-image { position: relative; height: 240px; overflow: hidden; background: #e9eef3; }
     .service-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
     .service-card:hover .service-image img { transform: scale(1.06); }
-    .service-number { position: absolute; top: 15px; left: 15px; background: var(--amber); color: var(--navy-dark); font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 30px; }
-    .service-content { padding: 20px 18px 18px; flex: 1; display: flex; flex-direction: column; }
-    .service-content h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
-    .service-content .desc { font-size: 12.5px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; flex: 1; }
+    .service-number { position: absolute; top: 18px; left: 18px; background: var(--amber); color: var(--navy-dark); font-size: 14px; font-weight: 700; padding: 7px 16px; border-radius: 30px; }
+    .service-content { padding: 28px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+    .service-content h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
+    .service-content .desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; flex: 1; }
 
-    .service-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 16px; border-top: 1px dashed var(--border); }
-    .service-actions .btn { padding: 8px 10px; font-size: 12px; border-radius: 8px; }
-    .service-actions .btn .ic { font-size: 14px; }
+    .service-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 20px; border-top: 1px dashed var(--border); }
+    .service-actions .btn { padding: 12px 14px; font-size: 13px; border-radius: 8px; }
+    .service-actions .btn .ic { font-size: 15px; }
 
-    /* CERTIFICATE STYLE FEATURES */
     .cert-style-box { background: var(--navy); border-radius: 20px; padding: 40px; color: #fff; box-shadow: 0 20px 40px rgba(10,37,64,0.15); border-top: 6px solid var(--teal); }
     .cert-style-box h2 { color: var(--teal); font-size: 24px; margin-bottom: 30px; font-weight: 800; letter-spacing: 0.5px; }
     .feature-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -141,7 +137,6 @@
     .feature-icon { width: 32px; height: 32px; background-color: var(--navy-dark); border: 2px solid var(--teal); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: var(--teal); font-size: 14px; font-weight: bold; flex-shrink: 0; }
     .feature-bar.highlight .feature-icon { background-color: transparent; border-color: #fff; color: #fff; }
 
-    /* WHY CHOOSE US & AREAS */
     .why-compact { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
     .why-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 22px; text-align: center; transition: .3s; }
     .why-item:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(10,37,64,.08); }
@@ -207,12 +202,12 @@
     .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
     .form-note { grid-column: 1 / -1; text-align: center; font-size: 11px; color: var(--muted); }
 
+    /* Responsive */
     @media (max-width: 1050px) {
-      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
       .why-compact { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
       .areas-layout { grid-template-columns: 1fr; }
       .feature-bars { grid-template-columns: 1fr; }
     }
@@ -230,6 +225,7 @@
       .hero { padding: 70px 0; }
       .hero h1 { font-size: 34px; }
       .services-grid, .why-compact { grid-template-columns: 1fr; }
+      .service-image { height: 220px; }
       .cta-inner { text-align: center; justify-content: center; }
       .cta-buttons { justify-content: center; }
       .fab span { display: none; }
@@ -243,7 +239,6 @@
 </head>
 
 <body>
-  <!-- SVG Icons -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
     <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
@@ -259,7 +254,6 @@
     <symbol id="i-thumbs-up" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></symbol>
   </svg>
 
-  <!-- Header -->
   <header class="header">
     <div class="container nav-inner">
       <a href="index.html" aria-label="DefectFinder.in home">
@@ -278,7 +272,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
       <div class="breadcrumbs"><a href="index.html">Home</a> / <span>Our Services</span></div>
@@ -291,7 +284,6 @@
     </div>
   </section>
 
-  <!-- Services Grid Section -->
   <section class="section" id="services">
     <div class="container">
       <div class="section-heading">
@@ -302,10 +294,9 @@
 
       <div class="services-grid">
 
-        <!-- Service 1 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/homeinspection.webp" alt="Home Inspection" width="400" height="200" loading="lazy">
+            <img src="assets/homeinspection.webp" alt="Home Inspection" width="500" height="240" loading="lazy">
             <span class="service-number">01</span>
           </div>
           <div class="service-content">
@@ -318,10 +309,9 @@
           </div>
         </article>
 
-        <!-- Service 2 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/report.webp" alt="Building Defect Report" width="400" height="200" loading="lazy">
+            <img src="assets/report.webp" alt="Building Defect Report" width="500" height="240" loading="lazy">
             <span class="service-number">02</span>
           </div>
           <div class="service-content">
@@ -334,10 +324,9 @@
           </div>
         </article>
 
-        <!-- Service 3 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/consult.webp" alt="Water Leak Detection" width="400" height="200" loading="lazy">
+            <img src="assets/waterleak.webp" alt="Water Leak Detection" width="500" height="240" loading="lazy">
             <span class="service-number">03</span>
           </div>
           <div class="service-content">
@@ -350,10 +339,9 @@
           </div>
         </article>
 
-        <!-- Service 4 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/homeinspection.webp" alt="Electrical Inspection" width="400" height="200" loading="lazy">
+            <img src="assets/electrical.webp" alt="Electrical Inspection" width="500" height="240" loading="lazy">
             <span class="service-number">04</span>
           </div>
           <div class="service-content">
@@ -366,10 +354,9 @@
           </div>
         </article>
 
-        <!-- Service 5 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/interior.webp" alt="Plumbing Inspection" width="400" height="200" loading="lazy">
+            <img src="assets/plumbing.webp" alt="Plumbing Inspection" width="500" height="240" loading="lazy">
             <span class="service-number">05</span>
           </div>
           <div class="service-content">
@@ -382,10 +369,9 @@
           </div>
         </article>
 
-        <!-- Service 6 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/homeinspection.webp" alt="Roof Inspection" width="400" height="200" loading="lazy">
+            <img src="assets/roof.webp" alt="Roof Inspection" width="500" height="240" loading="lazy">
             <span class="service-number">06</span>
           </div>
           <div class="service-content">
@@ -398,10 +384,9 @@
           </div>
         </article>
 
-        <!-- Service 7 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/report.webp" alt="Thermal Scanning" width="400" height="200" loading="lazy">
+            <img src="assets/thermal.webp" alt="Thermal Scanning" width="500" height="240" loading="lazy">
             <span class="service-number">07</span>
           </div>
           <div class="service-content">
@@ -414,10 +399,9 @@
           </div>
         </article>
 
-        <!-- Service 8 -->
         <article class="service-card">
           <div class="service-image">
-            <img src="assets/consult.webp" alt="Maintenance Consultation" width="400" height="200" loading="lazy">
+            <img src="assets/consult.webp" alt="Maintenance Consultation" width="500" height="240" loading="lazy">
             <span class="service-number">08</span>
           </div>
           <div class="service-content">
@@ -434,40 +418,6 @@
     </div>
   </section>
 
-  <!-- Certificate Style Section -->
-  <section class="section section-soft">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow center">Our Promise</div>
-        <h2>Certificate - Style</h2>
-        <p>We back every inspection with certified expertise and a commitment to your satisfaction.</p>
-      </div>
-
-      <div class="cert-style-box">
-        <h2>Why Choose DefectFinder?</h2>
-        <div class="feature-bars">
-          <div class="feature-bar">
-            <div class="feature-icon">✓</div>
-            Certified Inspectors
-          </div>
-          <div class="feature-bar">
-            <div class="feature-icon">✓</div>
-            Detailed Reporting
-          </div>
-          <div class="feature-bar">
-            <div class="feature-icon">✓</div>
-            On-Time Service
-          </div>
-          <div class="feature-bar highlight">
-            <div class="feature-icon">✓</div>
-            Customer Satisfaction
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Areas We Serve -->
   <section class="section" id="areas">
     <div class="container">
       <div class="section-heading">
@@ -499,7 +449,6 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
   <section class="cta">
     <div class="container cta-inner">
       <div>
@@ -514,7 +463,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -548,19 +496,17 @@
       </div>
 
       <div class="footer-bottom">
-        <span class="footer-tag">Better Inspections. Safer Investments.</span>
+        <span class="footer-tag">Inspect.Report.Resolved</span>
         <p class="footer-copy">© <span id="currentYear"></span> DefectFinder.Pvt.Ltd. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Action Buttons -->
   <div class="fab-wrap">
     <a class="fab call" href="tel:+971559610399" aria-label="Call DefectFinder"><svg class="ic"><use href="#i-phone"/></svg><span>Call Now</span></a>
     <a class="fab wa" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20need%20help%20with%20a%20property%20inspection." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
   </div>
 
-  <!-- Booking Modal -->
   <dialog id="bookModal" aria-labelledby="bookTitle">
     <div class="modal-head">
       <div>
@@ -620,12 +566,10 @@
     </form>
   </dialog>
 
-  <!-- Scripts -->
   <script>
     (function () {
       "use strict";
 
-      // Using the MD's number from the flyer
       var BOOKING_WA = "971559610399"; 
 
       var menuToggle = document.getElementById("menuToggle");

@@ -36,12 +36,8 @@
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
-        { "@type": "CreativeWork", "position": 1, "name": "3BHK Apartment Pre-Purchase Inspection" },
-        { "@type": "CreativeWork", "position": 2, "name": "New 2BHK Flat Handover Inspection" },
-        { "@type": "CreativeWork", "position": 3, "name": "Bathroom Seepage & Damp Wall Investigation" },
-        { "@type": "CreativeWork", "position": 4, "name": "Terrace Waterproofing Assessment" },
-        { "@type": "CreativeWork", "position": 5, "name": "Post-Renovation Interior Quality Check" },
-        { "@type": "CreativeWork", "position": 6, "name": "NRI-Owned Villa Annual Condition Audit" }
+        { "@type": "CreativeWork", "position": 1, "name": "New 2BHK Flat Handover Inspection" },
+        { "@type": "CreativeWork", "position": 2, "name": "Bathroom Seepage & Damp Wall Investigation" }
       ]
     }
   }
@@ -124,14 +120,15 @@
     .filter-empty { text-align: center; color: var(--muted); font-size: 13.5px; margin-top: 20px; }
     .link-inline { background: none; border: 0; color: var(--teal); font: 600 13px "Poppins", sans-serif; text-decoration: underline; padding: 0; }
 
-    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 900px; margin: 0 auto; }
     .project-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .3s; box-shadow: 0 6px 20px rgba(10,37,64,.05); display: flex; flex-direction: column; }
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(10,37,64,.13); border-color: var(--teal); }
     .project-card.hide { display: none; }
 
-    .project-slider { height: 255px; position: relative; overflow: hidden; background: #e9eef3; }
+    .project-slider { aspect-ratio: 1 / 1; width: 100%; position: relative; overflow: hidden; background: #e9eef3; }
     .project-slider img { width: 100%; height: 100%; object-fit: cover; transition: opacity .35s ease; cursor: zoom-in; }
     .project-tag { position: absolute; top: 16px; left: 16px; z-index: 3; background: var(--amber); color: var(--navy-dark); font-size: 11px; font-weight: 700; padding: 6px 13px; border-radius: 30px; }
+    .before-after-label { position: absolute; top: 16px; right: 56px; z-index: 3; background: rgba(10,37,64,.85); color: #fff; font-size: 11px; font-weight: 700; padding: 6px 13px; border-radius: 30px; letter-spacing: 0.5px; text-transform: uppercase; }
     .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.6); border-radius: 50%; background: rgba(10,37,64,.72); color: #fff; font-size: 22px; display: grid; place-items: center; z-index: 3; transition: .25s; opacity: 0; }
     .project-card:hover .slider-arrow, .project-slider:focus-within .slider-arrow { opacity: 1; }
     .slider-arrow:hover { background: var(--amber); color: var(--navy-dark); border-color: var(--amber); }
@@ -213,7 +210,6 @@
     .lb-caption { position: absolute; bottom: 24px; right: 24px; color: rgba(255,255,255,.75); font-size: 11.5px; max-width: 50%; text-align: right; }
 
     @media (max-width: 1050px) {
-      .project-grid { grid-template-columns: repeat(2, 1fr); }
       .trust-inner { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 860px) {
@@ -226,12 +222,13 @@
       .footer-top { grid-template-columns: 1fr; gap: 30px; }
       .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
     }
+    @media (max-width: 700px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 620px) {
       .section { padding: 60px 0; }
       .hero { padding: 70px 0; }
       .hero h1 { font-size: 34px; }
-      .project-grid { grid-template-columns: 1fr; }
-      .project-slider { height: 240px; }
       .trust-inner { gap: 18px 10px; }
       .trust-item { justify-content: flex-start; }
       .trust-item strong { font-size: 11px; }
@@ -246,6 +243,7 @@
       .filter-btn { padding: 7px 14px; font-size: 11.5px; }
       .lb-prev { left: 8px; } .lb-next { right: 8px; }
       .lb-caption { display: none; }
+      .before-after-label { top: auto; bottom: 52px; right: 14px; }
     }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; animation: none !important; } }
   </style>
@@ -321,53 +319,27 @@
         <div class="section-heading">
           <div class="eyebrow center">Our Portfolio</div>
           <h2>Completed Inspection Projects</h2>
-          <p>Filter by category and browse the image gallery on each project.</p>
+          <p>Filter by category and browse the before / after gallery on each project.</p>
         </div>
 
         <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
           <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
-          <button type="button" class="filter-btn" data-filter="residential" role="tab" aria-selected="false">Residential</button>
           <button type="button" class="filter-btn" data-filter="handover" role="tab" aria-selected="false">Handover</button>
           <button type="button" class="filter-btn" data-filter="leakage" role="tab" aria-selected="false">Leakage</button>
-          <button type="button" class="filter-btn" data-filter="roofing" role="tab" aria-selected="false">Roofing</button>
-          <button type="button" class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interior</button>
         </div>
 
         <div class="project-grid" id="projectGrid">
 
-          <article class="project-card" data-category="residential" data-project-id="p1">
-            <div class="project-slider" data-slider data-lightbox="p1" role="region" aria-label="3BHK apartment inspection gallery">
-              <img src="assets/project-1-1.webp" alt="3BHK apartment inspection – living room wall crack" width="400" height="255" loading="lazy" data-slide-image>
-              <span class="project-tag">Residential</span>
-              <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&#10094;</button>
-              <button type="button" class="slider-arrow slider-next" aria-label="Next image">&#10095;</button>
-              <div class="slider-dots" data-dots></div>
-              <span class="slide-counter" data-counter aria-live="polite">1 / 3</span>
-              <button type="button" class="zoom-btn" data-zoom aria-label="Open full image">⛶</button>
-            </div>
-            <div class="project-content">
-              <div class="project-meta-top">
-                <span class="meta-loc">📍 Kondapur, Hyderabad</span>
-                <span class="meta-date">Mar 2025</span>
-              </div>
-              <h3>3BHK Apartment Pre-Purchase Inspection</h3>
-              <p>Full interior walkthrough of a 1,850 sq.ft. resale apartment. Identified 3 active seepage patches, non-functional bathroom exhaust, and ₹1.2L worth of deferred maintenance.</p>
-              <div class="project-meta">
-                <span>Pre-Purchase</span>
-                <span>1,850 sq.ft.</span>
-                <span>Outcome: Price negotiated</span>
-              </div>
-            </div>
-          </article>
-
+          <!-- PROJECT 1: Handover (Before / After) -->
           <article class="project-card" data-category="handover" data-project-id="p2">
             <div class="project-slider" data-slider data-lightbox="p2" role="region" aria-label="New flat handover inspection gallery">
-              <img src="assets/project-2-1.webp" alt="New flat handover inspection – unfinished skirting" width="400" height="255" loading="lazy" data-slide-image>
+              <img src="assets/house-before.webp" alt="Handover inspection – before rectification" width="400" height="400" loading="lazy" data-slide-image>
               <span class="project-tag">Handover</span>
+              <span class="before-after-label" data-label>Before</span>
               <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&#10094;</button>
               <button type="button" class="slider-arrow slider-next" aria-label="Next image">&#10095;</button>
               <div class="slider-dots" data-dots></div>
-              <span class="slide-counter" data-counter aria-live="polite">1 / 3</span>
+              <span class="slide-counter" data-counter aria-live="polite">1 / 2</span>
               <button type="button" class="zoom-btn" data-zoom aria-label="Open full image">⛶</button>
             </div>
             <div class="project-content">
@@ -385,14 +357,16 @@
             </div>
           </article>
 
+          <!-- PROJECT 2: Leakage (Before / After) -->
           <article class="project-card" data-category="leakage" data-project-id="p3">
             <div class="project-slider" data-slider data-lightbox="p3" role="region" aria-label="Water leakage investigation gallery">
-              <img src="assets/project-3-1.webp" alt="Water leakage investigation – damp wall near bathroom" width="400" height="255" loading="lazy" data-slide-image>
+              <img src="assets/leakage-before.webp" alt="Water leakage – before repair" width="400" height="400" loading="lazy" data-slide-image>
               <span class="project-tag">Leakage</span>
+              <span class="before-after-label" data-label>Before</span>
               <button type="button" class="slider-arrow slider-prev" aria-label="Previous image">&#10094;</button>
               <button type="button" class="slider-arrow slider-next" aria-label="Next image">&#10095;</button>
               <div class="slider-dots" data-dots></div>
-              <span class="slide-counter" data-counter aria-live="polite">1 / 3</span>
+              <span class="slide-counter" data-counter aria-live="polite">1 / 2</span>
               <button type="button" class="zoom-btn" data-zoom aria-label="Open full image">⛶</button>
             </div>
             <div class="project-content">
@@ -464,7 +438,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span class="footer-tag">Better Inspections. Safer Investments.</span>
+        <span class="footer-tag">Inspect.Report.Resolved</span>
         <p class="footer-copy">© <span id="currentYear"></span> DefectFinder.Pvt.Ltd. All rights reserved.</p>
       </div>
     </div>
@@ -487,8 +461,7 @@
       <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name"></div>
       <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="Enter phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
       <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Enter email address" autocomplete="email"></div>
-      
-      <!-- Updated Dropdown to match flyer services -->
+
       <div class="form-group">
         <label for="inspectionType">Inspection Service *</label>
         <select id="inspectionType" name="inspectionType" required>
@@ -626,31 +599,40 @@
         });
       }
 
-      var projectImages = [
-        ["assets/project-1-1.webp", "assets/project-1-2.webp", "assets/project-1-3.webp"],
-        ["assets/project-2-1.webp", "assets/project-2-2.webp", "assets/project-2-3.webp"],
-        ["assets/project-3-1.webp", "assets/project-3-2.webp", "assets/project-3-3.webp"],
-        ["assets/project-4-1.webp", "assets/project-4-2.webp", "assets/project-4-3.webp"],
-        ["assets/project-5-1.webp", "assets/project-5-2.webp", "assets/project-5-3.webp"],
-        ["assets/project-6-1.webp", "assets/project-6-2.webp", "assets/project-6-3.webp"]
-      ];
+      // 2 images per project: Before & After
+      var projectImages = {
+        p2: ["assets/house-before.webp", "assets/house-after.webp"],
+        p3: ["assets/leakage-before.webp", "assets/leakage-after.webp"]
+      };
+
+      var imageLabels = {
+        p2: ["Before", "After"],
+        p3: ["Before", "After"]
+      };
+
+      var projectTitles = {
+        p2: "New 2BHK Flat Handover Inspection",
+        p3: "Bathroom Seepage & Damp Wall Investigation"
+      };
 
       var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       var sliders = document.querySelectorAll("[data-slider]");
 
-      sliders.forEach(function (slider, index) {
-        var images = projectImages[index];
+      sliders.forEach(function (slider) {
+        var pid = slider.dataset.lightbox;
+        var images = projectImages[pid];
+        var labels = imageLabels[pid];
         if (!images || !images.length) return;
 
         var imageEl = slider.querySelector("[data-slide-image]");
         var dotsContainer = slider.querySelector("[data-dots]");
         var counter = slider.querySelector("[data-counter]");
+        var labelEl = slider.querySelector("[data-label]");
         var prevBtn = slider.querySelector(".slider-prev");
         var nextBtn = slider.querySelector(".slider-next");
         if (!imageEl || !dotsContainer || !counter || !prevBtn || !nextBtn) return;
 
         var currentIndex = 0;
-        var autoSlide = null;
         var touchStartX = 0;
         var touchEndX = 0;
 
@@ -663,7 +645,6 @@
           dot.addEventListener("click", function () {
             currentIndex = i;
             showSlide();
-            restartAutoSlide();
           });
           dotsContainer.appendChild(dot);
         });
@@ -673,6 +654,7 @@
           imageEl.style.opacity = "0.35";
           setTimeout(function () {
             imageEl.src = images[currentIndex];
+            imageEl.alt = (projectTitles[pid] || "") + " – " + (labels ? labels[currentIndex] : "");
             imageEl.style.opacity = "1";
           }, reduceMotion ? 0 : 120);
 
@@ -683,58 +665,23 @@
           });
 
           counter.textContent = (currentIndex + 1) + " / " + images.length;
+          if (labelEl && labels) labelEl.textContent = labels[currentIndex];
         }
 
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % images.length;
-          showSlide();
-        }
+        function nextSlide() { currentIndex = (currentIndex + 1) % images.length; showSlide(); }
+        function previousSlide() { currentIndex = (currentIndex - 1 + images.length) % images.length; showSlide(); }
 
-        function previousSlide() {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          showSlide();
-        }
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", previousSlide);
 
-        function startAutoSlide() {
-          if (reduceMotion || images.length <= 1) return;
-          stopAutoSlide();
-          autoSlide = setInterval(nextSlide, 4500);
-        }
-        function stopAutoSlide() {
-          if (autoSlide) { clearInterval(autoSlide); autoSlide = null; }
-        }
-        function restartAutoSlide() {
-          stopAutoSlide();
-          startAutoSlide();
-        }
-
-        nextBtn.addEventListener("click", function () { nextSlide(); restartAutoSlide(); });
-        prevBtn.addEventListener("click", function () { previousSlide(); restartAutoSlide(); });
-
-        slider.addEventListener("mouseenter", stopAutoSlide);
-        slider.addEventListener("mouseleave", startAutoSlide);
-        slider.addEventListener("focusin", stopAutoSlide);
-        slider.addEventListener("focusout", startAutoSlide);
-
-        document.addEventListener("visibilitychange", function () {
-          if (document.hidden) stopAutoSlide();
-          else startAutoSlide();
-        });
-
-        slider.addEventListener("touchstart", function (e) {
-          touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+        slider.addEventListener("touchstart", function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
         slider.addEventListener("touchend", function (e) {
           touchEndX = e.changedTouches[0].screenX;
           var diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 50) {
-            if (diff > 0) nextSlide(); else previousSlide();
-            restartAutoSlide();
-          }
+          if (Math.abs(diff) > 50) { if (diff > 0) nextSlide(); else previousSlide(); }
         }, { passive: true });
 
-        showLive();
-        function showLive() { showSlide(); startAutoSlide(); }
+        showSlide();
       });
 
       var filterBtns = document.querySelectorAll(".filter-btn");
@@ -756,30 +703,18 @@
         });
       }
 
-      filterBtns.forEach(function (b) {
-        b.addEventListener("click", function () { applyFilter(b.dataset.filter); });
-      });
-      document.querySelectorAll(".link-inline[data-filter]").forEach(function (el) {
-        el.addEventListener("click", function () { applyFilter(el.dataset.filter); });
-      });
+      filterBtns.forEach(function (b) { b.addEventListener("click", function () { applyFilter(b.dataset.filter); }); });
+      document.querySelectorAll(".link-inline[data-filter]").forEach(function (el) { el.addEventListener("click", function () { applyFilter(el.dataset.filter); }); });
 
       var lightbox = document.getElementById("lightbox");
       var lbImg = document.getElementById("lbImage");
       var lbCounter = document.getElementById("lbCounter");
       var lbCaption = document.getElementById("lbCaption");
       var lbIndex = 0, lbImages = [], lbProjectId = null;
-      var projectTitles = {
-        p1: "3BHK Apartment Pre-Purchase Inspection",
-        p2: "New 2BHK Flat Handover Inspection",
-        p3: "Bathroom Seepage & Damp Wall Investigation",
-        p4: "Terrace Waterproofing Assessment (Villa)",
-        p5: "Post-Renovation Interior Quality Check",
-        p6: "NRI-Owned Villa Annual Condition Audit"
-      };
 
       function openLightbox(projectId, startIndex) {
         lbProjectId = projectId;
-        lbImages = projectImages[parseInt(projectId.replace("p",""), 10) - 1] || [];
+        lbImages = projectImages[projectId] || [];
         lbIndex = startIndex || 0;
         if (!lbImages.length) return;
         renderLightbox();
@@ -790,15 +725,12 @@
       function renderLightbox() {
         lbImg.src = lbImages[lbIndex];
         lbCounter.textContent = (lbIndex + 1) + " / " + lbImages.length;
-        lbCaption.textContent = projectTitles[lbProjectId] || "";
+        var label = (imageLabels[lbProjectId] && imageLabels[lbProjectId][lbIndex]) || "";
+        lbCaption.textContent = (projectTitles[lbProjectId] || "") + (label ? " – " + label : "");
         lbImg.style.opacity = "0";
         setTimeout(function () { lbImg.style.opacity = "1"; }, 80);
       }
-      function closeLightbox() {
-        lightbox.hidden = true;
-        lbImg.src = "";
-        document.body.style.overflow = "";
-      }
+      function closeLightbox() { lightbox.hidden = true; lbImg.src = ""; document.body.style.overflow = ""; }
       function lbNext() { lbIndex = (lbIndex + 1) % lbImages.length; renderLightbox(); }
       function lbPrev() { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; renderLightbox(); }
 
