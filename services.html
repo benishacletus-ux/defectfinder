@@ -95,7 +95,7 @@
     .nav-cta { padding: 11px 20px; font-size: 13px; border: none; }
     .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 42px; height: 42px; border-radius: 8px; font-size: 22px; }
 
-    .hero { position: relative; background: var(--navy) url('') right center / cover no-repeat; color: #fff; padding: 95px 0; }
+    .hero { position: relative; background: var(--navy) url('assets/hero.webp') right center / cover no-repeat; color: #fff; padding: 95px 0; }
     .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,28,51,.96) 0%, rgba(7,28,51,.83) 55%, rgba(7,28,51,.45) 100%); }
     .hero-content { position: relative; max-width: 720px; }
     .breadcrumbs { font-size: 12.5px; color: rgba(255,255,255,.75); margin-bottom: 18px; }
@@ -112,7 +112,7 @@
     .section-heading h2 { color: var(--navy); font-size: clamp(27px, 4vw, 38px); font-weight: 700; line-height: 1.25; margin-bottom: 14px; letter-spacing: -0.5px; }
     .section-heading p { color: var(--muted); font-size: 14px; }
 
-    /* UPDATED: Bigger service cards (3 per row instead of 4) */
+    /* Bigger service cards (3 per row) */
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
     .service-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .3s; box-shadow: 0 6px 20px rgba(10,37,64,.05); display: flex; flex-direction: column; }
     .service-card:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(10,37,64,.13); border-color: var(--teal); }
@@ -122,28 +122,32 @@
     .service-number { position: absolute; top: 18px; left: 18px; background: var(--amber); color: var(--navy-dark); font-size: 14px; font-weight: 700; padding: 7px 16px; border-radius: 30px; }
     .service-content { padding: 28px 24px 24px; flex: 1; display: flex; flex-direction: column; }
     .service-content h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.3; }
-    .service-content .desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; flex: 1; }
+    .service-content .desc { font-size: 14px; color: var(--muted); margin-bottom: 18px; line-height: 1.6; }
+
+    /* Key benefits list — NEW */
+    .benefits-title { font-size: 10.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; margin-top: 4px; }
+    .service-benefits { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; flex: 1; }
+    .service-benefits li { display: flex; align-items: flex-start; gap: 9px; font-size: 12.5px; color: var(--text); line-height: 1.5; }
+    .service-benefits .tick { width: 18px; height: 18px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-size: 10px; flex-shrink: 0; margin-top: 2px; }
 
     .service-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 20px; border-top: 1px dashed var(--border); }
     .service-actions .btn { padding: 12px 14px; font-size: 13px; border-radius: 8px; }
     .service-actions .btn .ic { font-size: 15px; }
 
-    .cert-style-box { background: var(--navy); border-radius: 20px; padding: 40px; color: #fff; box-shadow: 0 20px 40px rgba(10,37,64,0.15); border-top: 6px solid var(--teal); }
-    .cert-style-box h2 { color: var(--teal); font-size: 24px; margin-bottom: 30px; font-weight: 800; letter-spacing: 0.5px; }
-    .feature-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .feature-bar { display: flex; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 16px 20px; border-radius: 12px; font-size: 16px; font-weight: 600; transition: background 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+    /* CERTIFICATE STYLE SECTION */
+    .cert-section { padding: 0 0 85px; background: #fff; }
+    .cert-style-box { background: var(--navy); border-radius: 20px; padding: 48px 44px; color: #fff; box-shadow: 0 20px 40px rgba(10,37,64,0.15); border-top: 6px solid var(--teal); position: relative; overflow: hidden; }
+    .cert-style-box::before { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; background: rgba(31,181,173,0.08); border-radius: 50%; }
+    .cert-style-box h2 { color: var(--teal); font-size: 26px; margin-bottom: 8px; font-weight: 800; letter-spacing: 0.3px; position: relative; }
+    .cert-style-box > p { color: rgba(255,255,255,.75); font-size: 14px; margin-bottom: 30px; position: relative; }
+    .feature-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; position: relative; }
+    .feature-bar { display: flex; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 18px 22px; border-radius: 12px; font-size: 16px; font-weight: 600; transition: background 0.3s; border: 1px solid rgba(255,255,255,0.1); }
     .feature-bar:hover { background: rgba(255, 255, 255, 0.1); }
     .feature-bar.highlight { background: linear-gradient(90deg, #0f8a7a 0%, var(--teal) 100%); border: none; }
-    .feature-icon { width: 32px; height: 32px; background-color: var(--navy-dark); border: 2px solid var(--teal); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: var(--teal); font-size: 14px; font-weight: bold; flex-shrink: 0; }
+    .feature-icon { width: 36px; height: 36px; background-color: var(--navy-dark); border: 2px solid var(--teal); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; color: var(--teal); font-size: 15px; font-weight: bold; flex-shrink: 0; }
     .feature-bar.highlight .feature-icon { background-color: transparent; border-color: #fff; color: #fff; }
 
-    .why-compact { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-    .why-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 22px; text-align: center; transition: .3s; }
-    .why-item:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(10,37,64,.08); }
-    .why-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(31,181,173,.1); color: var(--teal); display: grid; place-items: center; font-size: 22px; margin: 0 auto 14px; }
-    .why-item h3 { font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .why-item p { font-size: 12px; color: var(--muted); line-height: 1.5; }
-
+    /* AREAS */
     .areas-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 34px; align-items: stretch; }
     .areas-panel { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 34px 30px; box-shadow: 0 12px 34px rgba(10,37,64,.08); border-top: 5px solid var(--amber); }
     .areas-panel h3 { font-size: 20px; color: var(--navy); margin-bottom: 6px; }
@@ -202,10 +206,8 @@
     .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
     .form-note { grid-column: 1 / -1; text-align: center; font-size: 11px; color: var(--muted); }
 
-    /* Responsive */
     @media (max-width: 1050px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-compact { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
       .areas-layout { grid-template-columns: 1fr; }
@@ -224,8 +226,9 @@
       .section { padding: 60px 0; }
       .hero { padding: 70px 0; }
       .hero h1 { font-size: 34px; }
-      .services-grid, .why-compact { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
       .service-image { height: 220px; }
+      .cert-style-box { padding: 36px 24px; }
       .cta-inner { text-align: center; justify-content: center; }
       .cta-buttons { justify-content: center; }
       .fab span { display: none; }
@@ -248,10 +251,6 @@
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
-    <symbol id="i-thumbs-up" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></symbol>
   </svg>
 
   <header class="header">
@@ -294,6 +293,7 @@
 
       <div class="services-grid">
 
+        <!-- 01 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/homeinspection.webp" alt="Home Inspection" width="500" height="240" loading="lazy">
@@ -302,6 +302,12 @@
           <div class="service-content">
             <h3>Home Inspection</h3>
             <p class="desc">A comprehensive, room-by-room assessment of your property's visible structural, electrical, plumbing, and interior components.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Full property condition snapshot in one visit</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Early detection of costly hidden defects</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Actionable report with photos and severity ratings</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Home Inspection"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Home Inspection"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -309,6 +315,7 @@
           </div>
         </article>
 
+        <!-- 02 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/report.webp" alt="Building Defect Report" width="500" height="240" loading="lazy">
@@ -317,6 +324,12 @@
           <div class="service-content">
             <h3>Building Defect Report</h3>
             <p class="desc">A focused, documentation-heavy report covering visible cracks, construction defects, workmanship issues, and finishing concerns.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Formal defect list ready to share with the builder</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Photo evidence of every finding, location-tagged</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Priority classification (critical / major / minor)</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Building Defect Report"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Building Defect Report"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -324,6 +337,7 @@
           </div>
         </article>
 
+        <!-- 03 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/waterleak.webp" alt="Water Leak Detection" width="500" height="240" loading="lazy">
@@ -332,6 +346,12 @@
           <div class="service-content">
             <h3>Water Leak Detection</h3>
             <p class="desc">Trace hidden water leaks, dampness, and moisture accumulation using moisture meters and thermal imaging.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Pinpoints leak source without breaking walls</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Prevents long-term structural damage and mould</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Repair recommendations, not guesswork</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Water Leak Detection"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Water Leak Detection"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -339,6 +359,7 @@
           </div>
         </article>
 
+        <!-- 04 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/electrical.webp" alt="Electrical Inspection" width="500" height="240" loading="lazy">
@@ -347,6 +368,12 @@
           <div class="service-content">
             <h3>Electrical Inspection</h3>
             <p class="desc">A visual safety and quality assessment of your home's electrical installation, ensuring safety and code compliance.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Reduces risk of electrical fires and shocks</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Confirms wiring meets safety standards</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Identifies load-balance issues before overload</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Electrical Inspection"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Electrical Inspection"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -354,6 +381,7 @@
           </div>
         </article>
 
+        <!-- 05 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/plumbing.webp" alt="Plumbing Inspection" width="500" height="240" loading="lazy">
@@ -362,6 +390,12 @@
           <div class="service-content">
             <h3>Plumbing Inspection</h3>
             <p class="desc">Detailed inspection of accessible plumbing systems to flag poor workmanship, low pressure, and moisture-prone areas.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Detect leaks and drainage issues early</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Verify fittings and fixtures are installed correctly</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Prevents water damage to walls and floors</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Plumbing Inspection"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Plumbing Inspection"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -369,6 +403,7 @@
           </div>
         </article>
 
+        <!-- 06 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/roof.webp" alt="Roof Inspection" width="500" height="240" loading="lazy">
@@ -377,6 +412,12 @@
           <div class="service-content">
             <h3>Roof Inspection</h3>
             <p class="desc">Comprehensive check of your roof structure, waterproofing, drainage, and visible signs of damage or wear.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Identifies cracked or blocked drainage points</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Checks waterproofing before monsoon season</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Prevents leaks that damage ceilings and walls</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Roof Inspection"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Roof Inspection"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -384,6 +425,7 @@
           </div>
         </article>
 
+        <!-- 07 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/thermal.webp" alt="Thermal Scanning" width="500" height="240" loading="lazy">
@@ -392,6 +434,12 @@
           <div class="service-content">
             <h3>Thermal Scanning</h3>
             <p class="desc">Infrared thermal imaging reveals temperature anomalies invisible to the naked eye, including hidden dampness and hot spots.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Finds hidden defects without demolition</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Detects electrical hot spots before fires</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Visual thermal evidence in your report</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Thermal Scanning"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Thermal Scanning"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -399,6 +447,7 @@
           </div>
         </article>
 
+        <!-- 08 -->
         <article class="service-card">
           <div class="service-image">
             <img src="assets/consult.webp" alt="Maintenance Consultation" width="500" height="240" loading="lazy">
@@ -407,6 +456,12 @@
           <div class="service-content">
             <h3>Maintenance Consultation</h3>
             <p class="desc">Expert advice on property upkeep, preventive maintenance schedules, and planning for future repairs.</p>
+            <div class="benefits-title">Key Benefits</div>
+            <ul class="service-benefits">
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Yearly maintenance plan tailored to your home</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Preventive schedule to avoid costly repairs</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Budget planning support for future upkeep</li>
+            </ul>
             <div class="service-actions">
               <button type="button" class="btn btn-navy btn-enquire" data-service="Maintenance Consultation"><svg class="ic"><use href="#i-message"/></svg> Enquire</button>
               <button type="button" class="btn btn-amber" data-book data-service="Maintenance Consultation"><svg class="ic"><use href="#i-calendar"/></svg> Book</button>
@@ -414,6 +469,34 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE-STYLE FEATURES (from flyer) -->
+  <section class="cert-section">
+    <div class="container">
+      <div class="cert-style-box">
+        <h2>Certificate - Style</h2>
+        <p>We back every inspection with certified expertise and a commitment to your satisfaction.</p>
+        <div class="feature-bars">
+          <div class="feature-bar">
+            <div class="feature-icon">✓</div>
+            Certified Inspectors
+          </div>
+          <div class="feature-bar">
+            <div class="feature-icon">✓</div>
+            Detailed Reporting
+          </div>
+          <div class="feature-bar">
+            <div class="feature-icon">✓</div>
+            On-Time Service
+          </div>
+          <div class="feature-bar highlight">
+            <div class="feature-icon">✓</div>
+            Customer Satisfaction
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -488,7 +571,7 @@
         <div class="footer-col">
           <h4>Contact Us</h4>
           <div class="footer-contact">
-            <a href="tel:+971559610399"><svg class="ic"><use href="#i-phone"/></svg>+971 55 961 0399</a>
+            <a href="tel:+971559610399"><svg class="ic"><use href="#i-phone"/></svg> Rafiq - Managing Director: +971 55 961 0399</a>
             <a href="https://wa.me/916360707285?text=Hello%20DefectFinder!" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> +91 63607 07285</a>
             <a href="contact.html"><svg class="ic"><use href="#i-pin"/></svg> Hyderabad, Telangana</a>
           </div>
