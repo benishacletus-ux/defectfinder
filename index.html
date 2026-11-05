@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="DefectFinder.in - independent property inspection, home renovation and technical guidance for NRI and local property owners in Hyderabad.">
+  <meta name="description" content="Property inspection in Hyderabad for NRI and local owners. Home inspection, defect report, water leak detection, and renovation. Book a home inspection today.">
   <meta name="theme-color" content="#0a2540">
-  <title>DefectFinder.Pvt.Ltd | Property Inspection & Home Renovation</title>
+  <title>Property Inspection in Hyderabad | DefectFinder – Home Inspection & Renovation</title>
   <link rel="canonical" href="https://defectfinder.in/">
   <link rel="icon" href="assets/favicon.webp" type="image/webp">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DefectFinder.in">
-  <meta property="og:title" content="DefectFinder.in | Property Inspection & Home Renovation">
-  <meta property="og:description" content="Independent property inspection, home renovation and technical guidance for NRI and local property owners in Hyderabad.">
+  <meta property="og:title" content="Property Inspection in Hyderabad | DefectFinder – Home Inspection & Renovation">
+  <meta property="og:description" content="Independent property inspection in Hyderabad. Home inspection, building defect report, water leak detection, and home renovation for NRI and local property owners.">
   <meta property="og:url" content="https://defectfinder.in/">
-  <meta property="og:image" content="https://defectfinder.in/assets/hero.webp">
+  <meta property="og:image" content="https://defectfinder.in/assets/hero-og.webp">
   <meta property="og:image:alt" content="DefectFinder property inspection in Hyderabad">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DefectFinder.in | Property Inspection & Home Renovation">
-  <meta name="twitter:description" content="Independent property inspection, home renovation and technical guidance for NRI and local property owners in Hyderabad.">
-  <meta name="twitter:image" content="https://defectfinder.in/assets/hero.webp">
+  <meta name="twitter:title" content="Property Inspection in Hyderabad | DefectFinder – Home Inspection & Renovation">
+  <meta name="twitter:description" content="Independent property inspection in Hyderabad. Home inspection, building defect report, water leak detection, and home renovation for NRI and local property owners.">
+  <meta name="twitter:image" content="https://defectfinder.in/assets/hero-og.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "DefectFinder.in",
-    "description": "Independent property inspection, home renovation and technical guidance for NRI and local property owners in Hyderabad.",
+    "description": "Property inspection in Hyderabad. Home inspection, building defect report, water leak detection, and home renovation for NRI and local property owners.",
     "url": "https://defectfinder.in/",
     "logo": "https://defectfinder.in/assets/logo.webp",
     "image": "https://defectfinder.in/assets/hero.webp",
@@ -98,6 +98,8 @@
     .btn-green:hover { background: #16a34a; transform: translateY(-2px); }
     .btn-navy { background: var(--navy); color: #fff; border-radius: 8px; }
     .btn-navy:hover { background: var(--navy-2); transform: translateY(-2px); }
+    .btn-black { background: #000; color: #fff; border-radius: 4px; padding: 10px 20px; font-size: 13px; }
+    .btn-black:hover { background: #333; }
 
     .header { background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
     .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -108,6 +110,7 @@
     .nav-cta { padding: 11px 20px; font-size: 13px; }
     .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 44px; height: 44px; border-radius: 8px; font-size: 22px; cursor: pointer; }
 
+    /* ============ HERO ============ */
     .hero { position: relative; min-height: 540px; display: flex; align-items: center; background: var(--navy) url('assets/hero.webp') right center / cover no-repeat; }
     @media (min-width: 1024px) {
       .hero { min-height: calc(100vh - 77px); }
@@ -121,35 +124,64 @@
     .hero h1 span { color: var(--amber); display: block; }
     .hero .sub { margin-top: 20px; color: #fff; font-size: 15.5px; font-weight: 500; max-width: 440px; line-height: 1.6; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    
+    /* ============ NEW HERO SERVICE ICONS ============ */
+    .hero-service-icons { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 32px; }
+    .hsi-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; width: 75px; }
+    .hsi-icon { width: 46px; height: 46px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.2); color: #fff; display: grid; place-items: center; font-size: 22px; transition: 0.3s; }
+    .hsi-item:hover .hsi-icon { background: var(--teal); border-color: var(--teal); transform: translateY(-3px); }
+    .hsi-item span { font-size: 11.5px; font-weight: 600; color: #fff; line-height: 1.2; }
+
     .hero-badges { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 34px; }
     .hero-badge { display: flex; align-items: center; gap: 11px; color: #fff; font-size: 12px; font-weight: 500; line-height: 1.35; }
     .hero-badge .ic { font-size: 30px; }
     .hero-badge + .hero-badge { padding-left: 26px; border-left: 1px solid rgba(255,255,255,.3); }
 
+    /* Mobile: hero content sits at the TOP of the hero section */
     @media (max-width: 860px) {
       .hero { 
         min-height: 100vh; 
         min-height: 100svh; 
         align-items: flex-start;
+        background: var(--navy) url('assets/hero-mobile.webp') center center / cover no-repeat;
       }
-      
-      .hero .container { 
-        padding: 30px 0 60px; 
+      .hero::before { display: none; }
+
+      .hero .container {
+        padding: 24px 0 48px;
         width: 92%;
-        margin: auto; 
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; 
+        justify-content: flex-start;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
       }
-      
-      .hero-content { 
-        max-width: 100%; 
-        margin-left: 0; 
-        display: flex; 
-        flex-direction: column; 
+      .hero-content { max-width: 100%; margin-left: 0; margin-top: 0; display: flex; flex-direction: column; }
+
+      .hero .eyebrow {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+        font-size: 10.5px;
+        margin-bottom: 18px;
       }
-      .hero h1 { font-size: clamp(32px, 8vw, 44px); }
-      .hero .sub { font-size: 14.5px; }
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        text-shadow:
+          0 2px 6px rgba(0,0,0,0.85),
+          0 4px 16px rgba(0,0,0,0.6);
+      }
+      .hero h1 span {
+        text-shadow:
+          0 2px 6px rgba(0,0,0,0.9),
+          0 4px 16px rgba(0,0,0,0.65);
+      }
+      .hero .sub {
+        font-size: 14.5px;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+      }
       
       .hero-actions { 
         display: grid; 
@@ -158,15 +190,38 @@
         width: 100%; 
         margin-top: 24px;
       }
-      .hero-actions .btn { 
-        width: 100%; 
-        padding: 12px 10px; 
-        font-size: 12.5px; 
+      .hero-actions .btn {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 12.5px;
       }
       .hero-actions .btn .ic { font-size: 15px; }
+
+      .hero-service-icons {
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .hsi-item { width: 22%; }
+      .hsi-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+      }
+      .hsi-item span {
+        font-size: 10.5px;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+      }
       
       .hero-badges { gap: 18px; margin-top: 28px; }
-      .hero-badge { font-size: 11.5px; }
+      .hero-badge {
+        font-size: 11.5px;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+      }
+      .hero-badge .ic {
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+      }
       .hero-badge + .hero-badge { padding-left: 0; border-left: 0; }
     }
 
@@ -358,16 +413,34 @@
     .team-head h2 { font-size: clamp(26px, 4vw, 32px); font-weight: 800; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.5px; }
     .team-head p { font-size: 13.5px; color: var(--muted); }
     .team-grid { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-    .team-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 34px 20px; background: #fff; border: 1px solid var(--border); border-radius: 12px; flex: 1; min-width: 260px; max-width: 320px; transition: 0.3s; box-shadow: 0 4px 15px rgba(10,37,64,0.02); }
+    .team-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 40px 24px 32px; background: #fff; border: 1px solid var(--border); border-radius: 16px; flex: 1; min-width: 280px; max-width: 360px; transition: 0.3s; box-shadow: 0 4px 15px rgba(10,37,64,0.02); }
     .team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(10,37,64,0.08); border-color: #cbd5e1; }
-    .tc-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 16px; font-size: 22px; }
+    .tc-icon { width: 140px; height: 140px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 20px; font-size: 52px; }
     .tc-icon.purple { background: #f3f0ff; color: #6b21a8; }
     .tc-icon.amber { background: #fff9e6; color: #b45309; }
-    .tc-icon.blue { background: #f0f9ff; color: #0369a1; }
+    .tc-icon.blue { background: #f0f9ff; color: #0369a1; width: 52px; height: 52px; border-radius: 14px; font-size: 22px; margin-bottom: 16px; }
     .team-card h4 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 2px; }
     .team-card span { font-size: 10.5px; font-weight: 700; color: var(--amber); display: block; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .team-card span + span { color: var(--muted); font-weight: 600; text-transform: none; letter-spacing: 0; margin-top: -10px; margin-bottom: 14px; }
     .team-card strong { font-size: 16px; font-weight: 800; color: var(--navy-dark); display: flex; align-items: center; gap: 4px; }
     .team-card strong .ic { font-size: 14px; stroke-width: 3; }
+
+    .team-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      margin-bottom: 20px;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 30px rgba(10,37,64,0.18);
+      background: #eaf2fb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-card:hover .team-photo {
+      transform: scale(1.04);
+      box-shadow: 0 14px 38px rgba(10,37,64,0.25);
+    }
 
     .bottom-cta-wrap { background: var(--soft); padding: 0 0 80px; }
     .mid-cta-wrap { background: #fff; padding: 0 0 80px; }
@@ -419,26 +492,56 @@
     .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
     .form-note { grid-column: 1 / -1; text-align: center; font-size: 11px; color: var(--muted); }
 
-    #sampleModal { width: min(720px, 94%); }
-    .sr-body { padding: 26px; }
-    .sr-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: var(--muted); margin-bottom: 16px; }
-    .sr-meta strong { color: var(--navy); }
-    .sr-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 18px; }
-    .sr-photos span { height: 80px; border-radius: 6px; background: linear-gradient(135deg, #c9d8e8, #9db6cf); }
-    .sr-photos span:nth-child(2) { background: linear-gradient(135deg, #cfe3d1, #8fb293); }
-    .sr-photos span:nth-child(3) { background: linear-gradient(135deg, #e6dccb, #b9a68a); }
-    .sr-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-    .sr-table th { text-align: left; color: var(--muted); font-weight: 600; padding: 8px 6px; border-bottom: 2px solid var(--border); }
-    .sr-table td { padding: 10px 6px; border-bottom: 1px solid #eef3f8; color: var(--text); vertical-align: top; }
-    .sr-table .pill { font-size: 10.5px; padding: 2px 10px; }
-    .sr-foot { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 20px; }
-    .sr-foot p { font-size: 11.5px; color: var(--muted); max-width: 380px; }
-    .sr-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* ============ NEW DEFECTFINDER SECTIONS ============ */
+    .ul-intro { padding: 70px 0; background: #fff; border-bottom: 1px solid var(--border); }
+    .ul-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .ul-text h2 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .ul-text h3 { font-size: 20px; font-weight: 700; color: var(--amber); margin-bottom: 16px; line-height: 1.3; }
+    .ul-text p { font-size: 14px; color: var(--text); line-height: 1.7; margin-bottom: 14px; }
+    .ul-image-wrap { background: #f8fafc; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); padding: 20px; text-align: center; }
+    .ul-image-wrap img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; }
+    
+    .achieve-section { padding: 60px 0; background: #fff; text-align: center; }
+    .achieve-title { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .achieve-sub { font-size: 24px; font-weight: 800; color: var(--amber); margin-bottom: 40px; }
+    .achieve-grid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
+    .achieve-item .num { font-size: 48px; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 8px; }
+    .achieve-item .num.dark { color: #000; }
+    .achieve-item .label { font-size: 13px; font-weight: 600; color: var(--text); }
+
+    .choose-section { padding: 70px 0; background: #fff; border-top: 1px solid var(--border); }
+    .choose-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+    .choose-text h2 { font-size: 26px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+    .choose-text h2 span { color: var(--amber); }
+    .choose-text p { font-size: 14px; color: var(--text); line-height: 1.7; }
+    
+    .choose-features { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 40px; padding-top: 10px; }
+    .cf-item { display: flex; align-items: center; gap: 14px; border-top: 2px solid var(--border); padding-top: 20px; }
+    .cf-item:nth-child(1) { border-top-color: #3b82f6; }
+    .cf-item:nth-child(2) { border-top-color: #22c55e; }
+    .cf-item .ic { font-size: 26px; color: var(--amber); }
+    .cf-item span { font-size: 14px; font-weight: 700; color: var(--navy); }
+
+    .how-work-section { padding: 70px 0 90px; background: #fff; }
+    .how-work-header { text-align: center; margin-bottom: 40px; }
+    .how-work-header h2 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .how-work-header h2 span { color: var(--amber); }
+    .how-work-header p { font-size: 14px; color: var(--muted); max-width: 700px; margin: 0 auto; }
+    
+    .how-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .how-work-img img { width: 100%; border-radius: 12px; object-fit: cover; }
+    .how-work-steps { display: flex; flex-direction: column; gap: 24px; }
+    .hw-step { display: flex; gap: 16px; align-items: flex-start; }
+    .hw-icon { color: var(--amber); font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+    .hw-content h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .hw-content p { font-size: 13px; color: var(--text); line-height: 1.6; }
 
     @media (max-width: 1050px) {
       .service-grid { grid-template-columns: repeat(2, 1fr); }
       .why-inner, .process-inner { grid-template-columns: 1fr; }
       .project-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .ul-grid, .choose-grid, .how-work-grid { grid-template-columns: 1fr; }
+      .choose-features { padding-top: 20px; }
     }
     @media (max-width: 860px) {
       .menu-toggle { display: block; }
@@ -460,31 +563,21 @@
       .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
 
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
-      .why-grid { 
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 30px 20px; 
-      }
-      .why-item { 
-        padding: 0; 
-        border-left: none; 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .why-icon {
-        margin-bottom: 12px;
-      }
+      .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 20px; }
+      .why-item { padding: 0; border-left: none; display: flex; flex-direction: column; align-items: flex-start; }
+      .why-icon { margin-bottom: 12px; }
 
       .process-inner { grid-template-columns: 1fr; gap: 30px; }
       .steps { display: flex; flex-direction: row; gap: 8px; width: 100%; justify-content: space-between; }
       .step { flex: 1; }
       .step-arrow { display: block; margin-top: 18px; font-size: 14px; } 
-      
       .step-circle { width: 40px; height: 40px; font-size: 18px; margin-bottom: 8px; }
       .step-num { width: 24px; height: 24px; font-size: 10px; }
       .step h3 { font-size: 13px; }
       .step p { font-size: 10.5px; line-height: 1.4; }
+
+      .achieve-grid { gap: 40px; }
+      .choose-features { grid-template-columns: 1fr; }
     }
     @media (max-width: 620px) {
       .container { width: 92%; }
@@ -499,8 +592,11 @@
       .pc-tab { flex: 1; text-align: center; padding: 10px 4px; font-size: 11px; }
       .team-grid { flex-direction: column; align-items: center; }
       .team-card { width: 100%; max-width: 100%; }
-      .sr-photos span { height: 56px; }
       .pc-price-display .amount { font-size: 42px; }
+      .how-work-grid { grid-template-columns: 1fr; }
+      .team-photo { width: 130px; height: 130px; border-width: 4px; }
+      .tc-icon { width: 120px; height: 120px; font-size: 44px; }
+      .tc-icon.blue { width: 52px; height: 52px; font-size: 22px; margin-bottom: 16px; }
     }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
   </style>
@@ -525,6 +621,12 @@
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M16 14h2M2 10h20"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></symbol>
   </svg>
 
   <header class="header">
@@ -548,21 +650,44 @@
   <noscript>
     <div style="background:#fff9e6;border-bottom:1px solid #f7b500;padding:12px 16px;text-align:center;font-size:13px;color:#0a2540;">
       JavaScript is disabled. For bookings, please call <a href="tel:+971559610399" style="text-decoration:underline;font-weight:700;">+971 55 961 0399</a> or
-      <a href="https://wa.me/971559610399?text=Hello%20DefectFinder!" style="text-decoration:underline;font-weight:700;" target="_blank" rel="noopener">message us on WhatsApp</a>.
+      <a href="https://wa.me/916360707285?text=Hello%20DefectFinder!" style="text-decoration:underline;font-weight:700;" target="_blank" rel="noopener">message us on WhatsApp</a>.
     </div>
   </noscript>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero" id="top">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">Property Inspection &amp; Home Renovation</div>
+          <div class="eyebrow">Property Inspection &amp; Home Renovation in Hyderabad</div>
           <h1>Find Property Defects <span>Before They Cost You</span></h1>
-          <p class="sub">Independent Property Inspection • Home Renovation • Technical Guidance</p>
+          <p class="sub">Independent property inspection, home renovation, and expert advice for NRI and local property owners in Hyderabad.</p>
+          
           <div class="hero-actions">
             <button type="button" class="btn btn-amber" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button>
             <a class="btn btn-outline" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp Our Team</a>
           </div>
+
+          <!-- Hero Service Icons -->
+          <div class="hero-service-icons">
+            <div class="hsi-item">
+              <div class="hsi-icon"><svg class="ic"><use href="#i-home"/></svg></div>
+              <span>Handover</span>
+            </div>
+            <div class="hsi-item">
+              <div class="hsi-icon"><svg class="ic"><use href="#i-search"/></svg></div>
+              <span>Pre-purchase</span>
+            </div>
+            <div class="hsi-item">
+              <div class="hsi-icon"><svg class="ic"><use href="#i-calendar"/></svg></div>
+              <span>Annual condition</span>
+            </div>
+            <div class="hsi-item">
+              <div class="hsi-icon"><svg class="ic"><use href="#i-tool"/></svg></div>
+              <span>MEP Safety</span>
+            </div>
+          </div>
+
           <div class="hero-badges">
             <div class="hero-badge"><svg class="ic"><use href="#i-users"/></svg><span>For NRI &amp; Local<br>Property Owners</span></div>
             <div class="hero-badge"><svg class="ic"><use href="#i-user"/></svg><span>Hyderabad<br>Based Technical Team</span></div>
@@ -572,6 +697,7 @@
       </div>
     </section>
 
+    <!-- STATS BAR -->
     <section class="stats-bar" aria-label="Key highlights">
       <div class="container stats-grid">
         <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Years of Experience</div></div>
@@ -581,32 +707,30 @@
       </div>
     </section>
 
-    <!-- UPDATED: Only the 8 services from the flyer -->
+    <!-- EXISTING SERVICES -->
     <section class="services" id="services">
       <div class="container">
         <div class="services-head">
           <div>
             <div class="eyebrow">Our Services</div>
             <h2>Complete Property Care</h2>
-            <p>From detailed inspections to structural assessments, we provide end-to-end solutions for your property needs.</p>
+            <p>From full home inspection to building defect reports, we give you end-to-end solutions for your property in Hyderabad.</p>
           </div>
           <a href="services.html" class="view-all">View All Services <svg class="ic"><use href="#i-arrow"/></svg></a>
         </div>
 
         <div class="service-grid">
-          <!-- 1 -->
           <article class="service-card">
             <div class="service-img">
-              <img src="assets/homeinspection.webp" alt="Home Inspection" width="400" height="400" loading="lazy">
+              <img src="assets/homeinspection.webp" alt="Home Inspection in Hyderabad" width="400" height="400" loading="lazy">
               <span class="service-icon"><svg class="ic"><use href="#i-home"/></svg></span>
             </div>
             <div class="service-body">
               <h3>Home Inspection</h3>
-              <p>Comprehensive, room-by-room assessment of your property's visible structural and interior components.</p>
+              <p>A full room-by-room check of your home's structure and interiors.</p>
               <a class="learn" href="services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
-          <!-- 2 -->
           <article class="service-card">
             <div class="service-img">
               <img src="assets/report.webp" alt="Building Defect Report" width="400" height="400" loading="lazy">
@@ -614,11 +738,10 @@
             </div>
             <div class="service-body">
               <h3>Building Defect Report</h3>
-              <p>Documentation-heavy report covering visible cracks, construction defects, and workmanship issues.</p>
+              <p>A detailed report of visible cracks, construction defects, and workmanship issues.</p>
               <a class="learn" href="services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
-          <!-- 3 -->
           <article class="service-card">
             <div class="service-img">
               <img src="assets/waterleak.webp" alt="Water Leak Detection" width="400" height="400" loading="lazy">
@@ -626,11 +749,10 @@
             </div>
             <div class="service-body">
               <h3>Water Leak Detection</h3>
-              <p>Trace hidden water leaks, dampness, and moisture accumulation using thermal imaging.</p>
+              <p>We find hidden water leaks, dampness, and moisture using thermal imaging.</p>
               <a class="learn" href="services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
-          <!-- 4 -->
           <article class="service-card">
             <div class="service-img">
               <img src="assets/electrical.webp" alt="Electrical Inspection" width="400" height="400" loading="lazy">
@@ -638,7 +760,7 @@
             </div>
             <div class="service-body">
               <h3>Electrical Inspection</h3>
-              <p>Visual safety and quality assessment of your home's electrical installation and load balance.</p>
+              <p>A visual safety check of your home's electrical wiring and load balance.</p>
               <a class="learn" href="services.html">Learn More <svg class="ic"><use href="#i-arrow"/></svg></a>
             </div>
           </article>
@@ -655,14 +777,14 @@
         <div class="why-left">
           <div class="eyebrow">Why Choose DefectFinder?</div>
           <h2>Your Property. Our Expertise.</h2>
-          <p>We combine technical knowledge, modern tools and honest reporting to give you complete peace of mind.</p>
+          <p>We use technical knowledge, modern tools, and honest reporting to give you complete peace of mind.</p>
           <a href="about.html" class="btn btn-amber">Learn More About Us <svg class="ic"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="why-grid">
           <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-award"/></svg></div><h3>Certified<br>Technical Team</h3><p>Experienced engineers and inspection experts.</p></div>
-          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-file"/></svg></div><h3>Detailed<br>Reports</h3><p>Clear, easy-to-understand reports with photos.</p></div>
-          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-users"/></svg></div><h3>NRI &amp; Local<br>Owner Support</h3><p>We support both NRI and local property owners.</p></div>
-          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-shield-check"/></svg></div><h3>Transparent<br>Guidance</h3><p>No hidden costs. Honest recommendations.</p></div>
+          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-file"/></svg></div><h3>Detailed<br>Reports</h3><p>Clear, easy-to-read reports with photos.</p></div>
+          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-users"/></svg></div><h3>NRI &amp; Local<br>Owner Support</h3><p>We help both NRI and local property owners.</p></div>
+          <div class="why-item"><div class="why-icon"><svg class="ic"><use href="#i-shield-check"/></svg></div><h3>Transparent<br>Guidance</h3><p>No hidden costs. Honest advice.</p></div>
         </div>
       </div>
     </section>
@@ -671,19 +793,19 @@
       <div class="container process-inner">
         <div class="process-left">
           <div class="eyebrow">How It Works</div>
-          <h2>Simple 3 Step Process</h2>
-          <p>Getting your property knowledge and fixed is easy. We handle the technical work, so you don't have to.</p>
+          <h2>Simple 3-Step Process</h2>
+          <p>Getting your property checked and fixed is easy. We do the technical work, so you don't have to.</p>
           <div class="steps">
             <div class="step">
               <div class="step-top"><span class="step-num">01</span><span class="step-circle"><svg class="ic"><use href="#i-search"/></svg></span></div>
               <h3>Inspect</h3>
-              <p>Our team conducts a detailed inspection of your property.</p>
+              <p>Our team checks your property in detail.</p>
             </div>
             <span class="step-arrow"><svg class="ic"><use href="#i-arrow"/></svg></span>
             <div class="step">
               <div class="step-top"><span class="step-num">02</span><span class="step-circle"><svg class="ic"><use href="#i-file"/></svg></span></div>
               <h3>Report</h3>
-              <p>You get a comprehensive report with photos and findings.</p>
+              <p>You get a full report with photos and findings.</p>
             </div>
             <span class="step-arrow"><svg class="ic"><use href="#i-arrow"/></svg></span>
             <div class="step">
@@ -700,11 +822,18 @@
             <div class="tagline">Clear. Detailed. Actionable.</div>
             <ul class="checks">
               <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>High-resolution photos</li>
-              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Defect location &amp; description</li>
+              <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Defect location and description</li>
               <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Technical recommendations</li>
               <li><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Priority levels (Critical / Major / Minor)</li>
             </ul>
-            <button type="button" class="btn btn-navy" id="openSample">View Sample Report <svg class="ic"><use href="#i-arrow"/></svg></button>
+            <!-- ============ UPDATED: View Sample Report opens PDF directly ============ -->
+            <a class="btn btn-navy"
+               href="assets/sample-inspection-report.pdf"
+               target="_blank"
+               rel="noopener"
+               onclick="if(window.gtag){gtag('event','view_sample_report',{file_name:'sample-inspection-report.pdf'});}">
+              View Sample Report <svg class="ic"><use href="#i-arrow"/></svg>
+            </a>
           </div>
           <div class="report-card" aria-hidden="true">
             <div class="rc-head"><span>INSPECTION REPORT</span><span>DefectFinder.Pvt.Ltd</span></div>
@@ -726,13 +855,13 @@
         <div class="testimonials-head">
           <div class="eyebrow center">Client Feedback</div>
           <h2>What Our Clients Say</h2>
-          <p>Real reviews from NRI and local property owners we've worked with in Hyderabad.</p>
+          <p>Real reviews from NRI and local property owners in Hyderabad.</p>
         </div>
 
         <div class="testi-grid">
           <article class="testi-card">
             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testi-quote">As an NRI, I couldn't fly down for the handover. DefectFinder's detailed report with photos helped me raise every defect with the builder remotely. Highly recommended.</p>
+            <p class="testi-quote">As an NRI, I could not fly down for the handover. DefectFinder's detailed report with photos helped me raise every defect with the builder from Dubai. Highly recommended.</p>
             <div class="testi-author">
               <div class="testi-avatar">SK</div>
               <div><h4>Sandeep K.</h4><span>NRI — Dubai</span></div>
@@ -741,7 +870,7 @@
 
           <article class="testi-card">
             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testi-quote">They found a hidden leak behind the bathroom wall that two other contractors missed. Fast, professional and honest pricing. Worth every rupee.</p>
+            <p class="testi-quote">They found a hidden leak behind the bathroom wall that two other contractors missed. Fast, professional, and honest pricing. Worth every rupee.</p>
             <div class="testi-author">
               <div class="testi-avatar">PR</div>
               <div><h4>Priya R.</h4><span>Homeowner — Kondapur</span></div>
@@ -750,7 +879,7 @@
 
           <article class="testi-card">
             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testi-quote">We used them for both the handover inspection and the renovation. One team, one point of contact — completely stress-free. The final report was incredibly thorough.</p>
+            <p class="testi-quote">We used them for both the handover inspection and the renovation. One team, one point of contact — completely stress-free. The final report was very thorough.</p>
             <div class="testi-author">
               <div class="testi-avatar">AM</div>
               <div><h4>Arjun M.</h4><span>Investor — Gachibowli</span></div>
@@ -765,7 +894,7 @@
         <div class="b-cta-box">
           <div class="b-cta-content">
             <h2>Not sure which inspection<br>you need?</h2>
-            <p>Send us your property details and our team will recommend the right service — free of charge.</p>
+            <p>Send us your property details and our team will suggest the right service — free of charge.</p>
           </div>
           <div class="b-cta-btn">
             <a href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20need%20help%20choosing%20the%20right%20inspection." class="btn btn-amber" target="_blank" rel="noopener">Ask on WhatsApp <svg class="ic ic-rotate"><use href="#i-arrow"/></svg></a>
@@ -778,8 +907,8 @@
       <div class="container">
         <div class="pricing-header">
           <div class="eyebrow center">Fair &amp; Transparent</div>
-          <h2>Pick your inspection, see the<br>price</h2>
-          <p>Serving Hyderabad, Telangana. Prices are fixed per inspection, with no hidden charges.</p>
+          <h2>Pick your inspection and see the price</h2>
+          <p>We serve Hyderabad, Telangana. Prices are fixed per inspection, with no hidden charges.</p>
         </div>
 
         <div class="pricing-grid">
@@ -789,7 +918,7 @@
               <span>Choose your home size</span>
             </div>
             <div class="pc-main-body">
-              <p class="pc-main-desc">A full check before you take possession, so you can raise defects with the builder while it is still easy to fix them.</p>
+              <p class="pc-main-desc">A full check before you take possession, so you can raise defects with the builder while it is still easy to fix.</p>
 
               <div class="pc-tabs" role="group" aria-label="Home size">
                 <button type="button" class="pc-tab active" data-size="2 BHK" aria-pressed="true">2 BHK</button>
@@ -833,14 +962,14 @@
             <button type="button" class="pc-card clickable interior-card pc-card-pad" data-book data-service="Home Interior Inspection" aria-label="Book home interior inspection">
               <div class="interior-card-left">
                 <h4>Home Interior Inspection</h4>
-                <p>Detailed evaluation of interior finishes and home systems.</p>
+                <p>Detailed check of interior finishes and home systems.</p>
               </div>
               <div class="interior-card-right"><strong>₹ 6,999</strong><span>onwards</span></div>
             </button>
 
             <button type="button" class="pc-card clickable reno-card pc-card-pad" data-book data-service="Home Renovation" aria-label="Book a free renovation site visit">
               <h4><svg class="ic"><use href="#i-tool"/></svg> Renovation &amp; Interior Modification</h4>
-              <p>Planning changes to your home? We assess the site first and quote after the inspection.</p>
+              <p>Planning changes to your home? We check the site first and quote after the inspection.</p>
               <div class="free-text">Site visit is free <span>quote after inspection</span></div>
             </button>
           </div>
@@ -867,24 +996,24 @@
 
         <div class="faq-wrap">
           <details class="faq-item" name="faq-group" open>
-            <summary class="faq-q">What exactly does a property inspection cover? <svg class="ic"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-a">Our inspection covers all major visual defects, including civil finish, plumbing, electricals, dampness, structural cracks, and tile alignment. We ensure your home meets the required quality standards before you move in.</div>
+            <summary class="faq-q">What does a property inspection cover? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">Our inspection covers all major visible defects, including civil finish, plumbing, electricals, dampness, structural cracks, and tile alignment. We make sure your home meets the required quality standards before you move in.</div>
           </details>
           <details class="faq-item" name="faq-group">
-            <summary class="faq-q">How long does an inspection usually take? <svg class="ic"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-a">A standard inspection for a 2 or 3 BHK flat typically takes about 2 to 4 hours. Larger properties or villas may take a bit longer, as we thoroughly check every corner of the property.</div>
+            <summary class="faq-q">How long does an inspection take? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">A standard inspection for a 2 or 3 BHK flat takes about 2 to 4 hours. Larger homes or villas may take a little longer, as we check every corner of the property.</div>
           </details>
           <details class="faq-item" name="faq-group">
-            <summary class="faq-q">When will I receive my inspection report? <svg class="ic"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-a">You will receive a comprehensive PDF report, complete with high-resolution photos and technical recommendations, within 48 hours of the inspection being completed.</div>
+            <summary class="faq-q">When will I get my inspection report? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a">You will get a full PDF report with high-resolution photos and technical recommendations within 48 hours of the inspection.</div>
           </details>
           <details class="faq-item" name="faq-group">
             <summary class="faq-q">Do I need to be present during the inspection? <svg class="ic"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-a">It is entirely up to you! You are welcome to join us so we can point out issues in person, but it is not mandatory. Many of our NRI clients are not present, and our detailed report tells them everything they need to know.</div>
+            <div class="faq-a">It is up to you. You are welcome to join us so we can show you issues in person, but it is not required. Many of our NRI clients are not present, and our detailed report tells them everything they need to know.</div>
           </details>
           <details class="faq-item" name="faq-group">
             <summary class="faq-q">Do you also fix the defects you find? <svg class="ic"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-a">Yes! Aside from inspecting, we offer comprehensive Home Renovation and Interior Modification services. We can provide a quote to fix any major issues or upgrade your space after the inspection.</div>
+            <div class="faq-a">Yes. We also offer home renovation and interior modification services. We can give you a quote to fix any major issues or upgrade your space after the inspection.</div>
           </details>
         </div>
       </div>
@@ -895,20 +1024,24 @@
         <div class="team-head">
           <div class="eyebrow center">Talk to our team</div>
           <h2>Speak with an expert today</h2>
-          <p>Call or message us directly. We're happy to answer your questions.</p>
+          <p>Call or message us directly. We are happy to answer your questions.</p>
         </div>
 
         <div class="team-grid">
-          <a href="tel:+971569465357" class="team-card">
-            <div class="tc-icon purple"><svg class="ic"><use href="#i-user"/></svg></div>
-            <h4>Rafiq</h4>
-            <span>Executive Director</span>
+          <a href="tel:+971559610399" class="team-card">
+            <img src="assets/mahamd.webp" alt="Mahamd Rafiq — Managing Director, DefectFinder Hyderabad" class="team-photo" width="160" height="160" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="tc-icon purple" style="display:none;"><svg class="ic"><use href="#i-user"/></svg></div>
+            <h4>Mahamd Rafiq</h4>
+            <span>Managing Director</span>
+            <span>B.Tech Civil Engineer</span>
             <strong>+971 55 961 0399</strong>
           </a>
           <a href="tel:+916360707285" class="team-card">
-            <div class="tc-icon amber"><svg class="ic"><use href="#i-tool"/></svg></div>
-            <h4>Adnan</h4>
-            <span>Technical Engineer</span>
+            <img src="assets/adnan.webp" alt="Adnan Ahmed Fazil — Executive Director, DefectFinder Hyderabad" class="team-photo" width="160" height="160" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="tc-icon amber" style="display:none;"><svg class="ic"><use href="#i-user"/></svg></div>
+            <h4>Adnan Ahmed Fazil</h4>
+            <span>Executive Director</span>
+            <span>B.Tech Civil Engineer</span>
             <strong>+91 63607 07285</strong>
           </a>
           <a href="https://wa.me/916360707285?text=Hello%20DefectFinder!" target="_blank" rel="noopener" class="team-card">
@@ -925,8 +1058,8 @@
       <div class="container">
         <div class="b-cta-box">
           <div class="b-cta-content">
-            <h2>Planning to buy, maintain or<br>inspect a property?</h2>
-            <p>Speak with our team and get the right inspection support today. Free consultation included.</p>
+            <h2>Planning to buy, maintain, or<br>inspect a property?</h2>
+            <p>Talk to our team and get the right inspection support today. Free consultation included.</p>
           </div>
           <div class="b-cta-btn">
             <a href="contact.html" class="btn btn-amber">Contact DefectFinder <svg class="ic ic-rotate"><use href="#i-arrow"/></svg></a>
@@ -943,7 +1076,7 @@
           <a href="index.html" aria-label="DefectFinder.in home">
             <img src="assets/logo.webp" alt="DefectFinder.in" class="logo-img" width="188" height="75" loading="lazy">
           </a>
-          <p>Independent property inspection, home renovation, and technical guidance for NRI and local property owners in Hyderabad.</p>
+          <p>Independent property inspection, home renovation, and expert advice for NRI and local property owners in Hyderabad.</p>
         </div>
 
         <div class="footer-col">
@@ -961,8 +1094,8 @@
         <div class="footer-col">
           <h4>Contact Us</h4>
           <div class="footer-contact">
-            <a href="tel:+971559610399"><svg class="ic"><use href="#i-phone"/></svg> +971 55 961 0399</a>
-            <a href="https://wa.me/916360707285?text=Hello%20DefectFinder!" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> +91 63607 07285</a>
+            <a href="https://wa.me/971559610399?text=Hello%20DefectFinder!" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> +971 55 961 0399</a>
+            <a href="tel:+916360707285"><svg class="ic"><use href="#i-phone"/></svg> +91 63607 07285</a>
             <a href="contact.html"><svg class="ic"><use href="#i-pin"/></svg> Hyderabad, Telangana</a>
           </div>
         </div>
@@ -993,7 +1126,6 @@
       <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
       <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email"></div>
       
-      <!-- Updated Dropdown: Only the 8 flyer services -->
       <div class="form-group">
         <label for="inspectionType">Service *</label>
         <select id="inspectionType" name="inspectionType" required>
@@ -1029,36 +1161,6 @@
     </form>
   </dialog>
 
-  <dialog id="sampleModal" aria-labelledby="sampleTitle">
-    <div class="modal-head">
-      <div>
-        <h3 id="sampleTitle">Sample Inspection Report</h3>
-        <p>An example of what you receive after every inspection.</p>
-      </div>
-      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
-    </div>
-    <div class="sr-body">
-      <div class="sr-meta">
-        <span><strong>Property:</strong> 3 BHK Apartment, Hyderabad</span>
-        <span><strong>Inspection type:</strong> New Flat Handover</span>
-      </div>
-      <div class="sr-photos"><span></span><span></span><span></span><span></span></div>
-      <div class="sr-wrap">
-        <table class="sr-table">
-          <tr><th>#</th><th>Issue</th><th>Location</th><th>Recommendation</th><th>Priority</th></tr>
-          <tr><td>1</td><td>Crack in wall</td><td>Living Room</td><td>Seal and re-plaster; monitor for movement</td><td><span class="pill high">Critical</span></td></tr>
-          <tr><td>2</td><td>Water leakage</td><td>Bathroom</td><td>Redo waterproofing and fix pipe joint</td><td><span class="pill high">Critical</span></td></tr>
-          <tr><td>3</td><td>Tile damage</td><td>Balcony</td><td>Replace hollow and cracked tiles</td><td><span class="pill med">Major</span></td></tr>
-          <tr><td>4</td><td>Paint issue</td><td>Bedroom</td><td>Touch up and repaint affected wall</td><td><span class="pill low">Minor</span></td></tr>
-        </table>
-      </div>
-      <div class="sr-foot">
-        <p>This is an illustrative sample. Your report will include photos and findings specific to your property.</p>
-        <button type="button" class="btn btn-amber" id="sampleBook"><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button>
-      </div>
-    </div>
-  </dialog>
-
   <script>
     (function () {
       "use strict";
@@ -1068,7 +1170,6 @@
       var menuToggle = document.getElementById("menuToggle");
       var navLinks = document.getElementById("navLinks");
       var bookModal = document.getElementById("bookModal");
-      var sampleModal = document.getElementById("sampleModal");
       var form = document.getElementById("inspectionForm");
       var serviceSel = document.getElementById("inspectionType");
       var propertySel = document.getElementById("propertyType");
@@ -1151,11 +1252,6 @@
           bookModal.close();
         });
       }
-
-      var openSample = document.getElementById("openSample");
-      var sampleBook = document.getElementById("sampleBook");
-      if (openSample) openSample.addEventListener("click", function () { safeShow(sampleModal); });
-      if (sampleBook) sampleBook.addEventListener("click", function () { openBooking("New Flat Handover Inspection"); });
 
       var PRICES = { "2 BHK": "7,999", "3 BHK": "9,999", "4 BHK / Villa": "14,999" };
       var tabs = document.querySelectorAll(".pc-tab");
