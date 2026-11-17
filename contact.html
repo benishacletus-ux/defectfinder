@@ -210,6 +210,8 @@
     .nav-links a { color: var(--navy); font-size: 13.5px; font-weight: 500; padding: 8px 0; border-bottom: 2px solid transparent; transition: .25s; }
     .nav-links a:hover, .nav-links a.active { border-color: var(--amber); color: var(--navy); }
     .nav-cta { padding: 11px 20px; font-size: 13px; border: none; }
+    .nav-cta-quote { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .nav-cta-quote:hover { background: var(--navy); color: #fff; }
     .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 42px; height: 42px; border-radius: 8px; font-size: 22px; }
 
     .page-hero { position: relative; background: var(--navy) url('assets/hyderabad.webp') right center / cover no-repeat; color: #fff; padding: 95px 0; }
@@ -341,6 +343,7 @@
       .nav-links.show { display: flex; }
       .nav-links li { width: 100%; }
       .nav-links a { display: inline-block; }
+      .nav-cta, .nav-cta-quote { width: 100%; justify-content: center; margin-top: 8px; }
       .trust-inner { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr; gap: 30px; }
       .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
@@ -354,6 +357,23 @@
       .fab span { display: none; }
       .fab { padding: 13px; }
     }
+    /* ===== QUOTE MODAL ===== */
+    dialog { border: 0; border-radius: 16px; padding: 0; width: min(640px, 94%); margin: auto; box-shadow: 0 30px 80px rgba(0,0,0,.35); max-height: 92vh; overflow-y: auto; }
+    dialog::backdrop { background: rgba(7,28,51,.65); backdrop-filter: blur(3px); }
+    .modal-head { background: var(--navy); color: #fff; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--amber); }
+    .modal-head h3 { font-size: 18px; }
+    .modal-head p { font-size: 12px; color: rgba(255,255,255,.75); }
+    .modal-close { background: transparent; border: 0; color: #fff; font-size: 26px; cursor: pointer; line-height: 1; width: 40px; height: 40px; display: grid; place-items: center; }
+    .booking-form { padding: 24px 26px 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .booking-form .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .booking-form .form-group.full { grid-column: 1 / -1; }
+    .booking-form .form-group label { font-size: 12.5px; font-weight: 600; color: var(--navy); }
+    .booking-form .form-group input, .booking-form .form-group select, .booking-form .form-group textarea { width: 100%; padding: 12px 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; font-size: 14px; outline: none; transition: .2s; background: #fff; }
+    .booking-form .form-group input:focus, .booking-form .form-group select:focus, .booking-form .form-group textarea:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(247,181,0,.18); }
+    .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
+    .booking-form .form-note { grid-column: 1 / -1; margin-top: 0; text-align: center; font-size: 11px; color: var(--muted); }
+    @media (max-width: 620px) { .booking-form { grid-template-columns: 1fr; } .booking-form .form-group.full { grid-column: auto; } }
+
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; animation: none !important; } }
   </style>
 </head>
@@ -388,6 +408,7 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
+        <li><button type="button" class="btn nav-cta-quote nav-cta" data-quote><svg class="ic"><use href="#i-file"/></svg> Get a Quote</button></li>
         <li><button type="button" class="btn btn-amber nav-cta" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button></li>
       </ul>
     </div>
@@ -796,6 +817,111 @@
 
       var yearEl = document.getElementById("currentYear");
       if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <!-- NEW QUOTE MODAL -->
+  <dialog id="quoteModal" aria-labelledby="quoteTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="quoteTitle">Get a Quote</h3>
+        <p>Tell us what you need and we'll send you a custom quote via WhatsApp.</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+    </div>
+    <form class="booking-form" id="quoteForm">
+      <div class="form-group"><label for="q-name">Full Name *</label><input type="text" id="q-name" name="name" placeholder="Enter your full name" required autocomplete="name"></div>
+      <div class="form-group"><label for="q-phone">Phone Number *</label><input type="tel" id="q-phone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
+      
+      <div class="form-group">
+        <label for="q-property">Property Type *</label>
+        <select id="q-property" name="propertyType" required>
+          <option value="">Select property type</option>
+          <option value="2 BHK">2 BHK</option>
+          <option value="3 BHK">3 BHK</option>
+          <option value="4 BHK / Villa">4 BHK / Villa</option>
+          <option value="Commercial Property">Commercial Property</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group full"><label for="q-location">Property Location *</label><input type="text" id="q-location" name="location" placeholder="Enter exact property location (e.g. Dubai, Hyderabad)" required autocomplete="address-level2"></div>
+      
+      <div class="form-group full">
+        <label for="q-service">What do you need a quote for? *</label>
+        <select id="q-service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Home Inspection">Home Inspection</option>
+          <option value="Building Defect Report">Building Defect Report</option>
+          <option value="Water Leak Detection">Water Leak Detection</option>
+          <option value="Electrical Inspection">Electrical Inspection</option>
+          <option value="Plumbing Inspection">Plumbing Inspection</option>
+          <option value="New Flat Handover Inspection">New Flat Handover Inspection</option>
+          <option value="Home Renovation">Home Renovation</option>
+          <option value="Other / Not Sure">Other / Not Sure</option>
+        </select>
+      </div>
+
+      <div class="form-group full"><label for="q-message">Details / Specific Requirements</label><textarea id="q-message" name="message" rows="3" placeholder="Please provide any specific details so we can give you an accurate quote..."></textarea></div>
+      
+      <button type="submit" class="btn btn-amber">Request Quote via WhatsApp <svg class="ic"><use href="#i-arrow"/></svg></button>
+      <p class="form-note">Your information will be used only to respond to your enquiry.</p>
+    </form>
+  </dialog>
+
+  <script>
+    /* Get a Quote modal */
+    (function () {
+      "use strict";
+      var BOOKING_WA = "971559610399";
+      var quoteModal = document.getElementById("quoteModal");
+      var quoteForm = document.getElementById("quoteForm");
+      var navLinks = document.getElementById("navLinks");
+      var menuToggle = document.getElementById("menuToggle");
+      if (!quoteModal) return;
+
+      function closeMenu() {
+        if (!navLinks) return;
+        navLinks.classList.remove("show");
+        if (menuToggle) {
+          menuToggle.innerHTML = "\u2630";
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+        }
+      }
+      function openQuote() {
+        closeMenu();
+        if (typeof quoteModal.showModal !== "function" || quoteModal.open) return;
+        document.querySelectorAll("dialog[open]").forEach(function (d) { d.close(); });
+        quoteModal.showModal();
+      }
+      document.querySelectorAll("[data-quote]").forEach(function (el) {
+        el.addEventListener("click", openQuote);
+      });
+      quoteModal.addEventListener("click", function (e) { if (e.target === quoteModal) quoteModal.close(); });
+      quoteModal.querySelectorAll("[data-close]").forEach(function (b) {
+        b.addEventListener("click", function () { quoteModal.close(); });
+      });
+      if (quoteForm) {
+        quoteForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); return; }
+          var d = new FormData(quoteForm);
+          var msg =
+            "Hello DefectFinder Pvt Ltd! I would like to request a quote.\n\n" +
+            "*Name:* " + (d.get("name") || "") + "\n" +
+            "*Phone:* " + (d.get("phone") || "") + "\n" +
+            "*Service Needed:* " + (d.get("service") || "") + "\n" +
+            "*Property Type:* " + (d.get("propertyType") || "") + "\n" +
+            "*Location:* " + (d.get("location") || "") + "\n" +
+            "*Details:* " + (d.get("message") || "No additional details");
+          window.open("https://wa.me/" + BOOKING_WA + "?text=" + encodeURIComponent(msg), "_blank");
+          if (window.gtag) {
+            gtag("event", "quote_request", { "event_category": "engagement", "event_label": d.get("service") || "Unknown" });
+          }
+          quoteForm.reset();
+          quoteModal.close();
+        });
+      }
     })();
   </script>
 </body>
