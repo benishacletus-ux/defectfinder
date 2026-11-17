@@ -1,0 +1,14 @@
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'blog.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'projects.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+ about.html                | 161 [32m+++++++++++++++++[m[31m--------[m
+ blog-home-inspection.html | 300 [32m++++++++++++++++++++++++++++++++++++[m[31m----------[m
+ blog.html                 | 175 [32m++++++++++++++[m[31m-------------[m
+ contact.html              | 246 [32m++++++++++++++++++++++[m[31m---------------[m
+ index.html                | 133 [32m++++++++++++[m[31m--------[m
+ projects.html             | 165 [32m+++++++++++++++++[m[31m--------[m
+ services.html             | 137 [32m++++++++++++++[m[31m-------[m
+ 7 files changed, 869 insertions(+), 448 deletions(-)
