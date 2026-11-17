@@ -12,11 +12,11 @@
 
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PZFQQ9ZD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -136,14 +136,18 @@
     .header { background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
     .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .logo-img { height: 56px; width: auto; object-fit: contain; }
-    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links { display: flex; align-items: center; gap: 18px; }
     .nav-links a { color: var(--navy); font-size: 13.5px; font-weight: 500; padding: 8px 0; border-bottom: 2px solid transparent; transition: .25s; }
     .nav-links a:hover, .nav-links a.active { border-color: var(--amber); color: var(--navy); }
-    .nav-cta { padding: 11px 20px; font-size: 13px; }
+    
+    .nav-cta { padding: 10px 16px; font-size: 12.5px; }
+    .nav-cta-quote { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .nav-cta-quote:hover { background: var(--navy); color: #fff; }
+    
     .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 42px; height: 42px; border-radius: 8px; font-size: 22px; cursor: pointer; }
 
     /* PAGE HERO */
-    .page-hero { position: relative; background: var(--navy) url('') right center / cover no-repeat; color: #fff; padding: 80px 0 74px; }
+    .page-hero { position: relative; background: var(--navy) url('assets/hyderabad.webp') right center / cover no-repeat; color: #fff; padding: 80px 0 74px; }
     .page-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,28,51,.96) 0%, rgba(7,28,51,.85) 50%, rgba(7,28,51,.55) 100%); }
     .page-hero .container { position: relative; }
     .breadcrumbs { font-size: 12.5px; color: rgba(255,255,255,.75); margin-bottom: 14px; }
@@ -289,7 +293,7 @@
     .fab.call { background: var(--navy); }
 
     /* MODAL */
-    dialog { border: 0; border-radius: 16px; padding: 0; width: min(640px, 94%); margin: auto; box-shadow: 0 30px 80px rgba(0,0,0,.35); max-height: 92vh; }
+    dialog { border: 0; border-radius: 16px; padding: 0; width: min(640px, 94%); margin: auto; box-shadow: 0 30px 80px rgba(0,0,0,.35); max-height: 92vh; overflow-y: auto; }
     dialog::backdrop { background: rgba(7,28,51,.65); backdrop-filter: blur(3px); }
     .modal-head { background: var(--navy); color: #fff; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--amber); }
     .modal-head h3 { font-size: 18px; }
@@ -317,7 +321,8 @@
       .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: #fff; border-bottom: 1px solid var(--border); flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 5% 20px; display: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .nav-links.show { display: flex; }
       .nav-links li { width: 100%; }
-      .nav-links a { display: inline-block; }
+      .nav-links a { display: inline-block; padding: 12px 0; font-size: 15px; width: 100%; }
+      .nav-cta, .nav-cta-quote { width: 100%; justify-content: center; margin-top: 8px; }
       .footer-top { grid-template-columns: 1fr; gap: 30px; }
       .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
     }
@@ -359,6 +364,7 @@
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
   </svg>
 
   <!-- HEADER -->
@@ -375,6 +381,8 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <!-- ADDED QUOTE BUTTON TO NAV -->
+        <li><button type="button" class="btn nav-cta-quote nav-cta" data-quote><svg class="ic"><use href="#i-file"/></svg> Get a Quote</button></li>
         <li><button type="button" class="btn btn-amber nav-cta" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button></li>
       </ul>
     </div>
@@ -577,7 +585,7 @@
         </div>
         <div class="cta-buttons">
           <a class="btn btn-green" href="https://wa.me/971559610399?text=Hello%20DefectFinder!" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp Our Team</a>
-          <a class="btn btn-outline" href="contact.html">Contact Us <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <button type="button" class="btn btn-outline" data-quote>Get a Quote <svg class="ic ic-rotate"><use href="#i-arrow"/></svg></button>
         </div>
       </div>
     </section>
@@ -690,6 +698,55 @@
     </form>
   </dialog>
 
+  <!-- NEW QUOTE MODAL -->
+  <dialog id="quoteModal" aria-labelledby="quoteTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="quoteTitle">Get a Quote</h3>
+        <p>Tell us what you need and we'll send you a custom quote via WhatsApp.</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+    </div>
+    <form class="booking-form" id="quoteForm">
+      <div class="form-group"><label for="q-name">Full Name *</label><input type="text" id="q-name" name="name" placeholder="Enter your full name" required autocomplete="name"></div>
+      <div class="form-group"><label for="q-phone">Phone Number *</label><input type="tel" id="q-phone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
+      
+      <div class="form-group">
+        <label for="q-property">Property Type *</label>
+        <select id="q-property" name="propertyType" required>
+          <option value="">Select property type</option>
+          <option value="2 BHK">2 BHK</option>
+          <option value="3 BHK">3 BHK</option>
+          <option value="4 BHK / Villa">4 BHK / Villa</option>
+          <option value="Commercial Property">Commercial Property</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group full"><label for="q-location">Property Location *</label><input type="text" id="q-location" name="location" placeholder="Enter exact property location (e.g. Dubai, Hyderabad)" required autocomplete="address-level2"></div>
+      
+      <div class="form-group full">
+        <label for="q-service">What do you need a quote for? *</label>
+        <select id="q-service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Home Inspection">Home Inspection</option>
+          <option value="Building Defect Report">Building Defect Report</option>
+          <option value="Water Leak Detection">Water Leak Detection</option>
+          <option value="Electrical Inspection">Electrical Inspection</option>
+          <option value="Plumbing Inspection">Plumbing Inspection</option>
+          <option value="New Flat Handover Inspection">New Flat Handover Inspection</option>
+          <option value="Home Renovation">Home Renovation</option>
+          <option value="Other / Not Sure">Other / Not Sure</option>
+        </select>
+      </div>
+
+      <div class="form-group full"><label for="q-message">Details / Specific Requirements</label><textarea id="q-message" name="message" rows="3" placeholder="Please provide any specific details so we can give you an accurate quote..."></textarea></div>
+      
+      <button type="submit" class="btn btn-amber">Request Quote via WhatsApp <svg class="ic"><use href="#i-arrow"/></svg></button>
+      <p class="form-note">Your information will be used only to respond to your enquiry.</p>
+    </form>
+  </dialog>
+
   <script>
     (function () {
       "use strict";
@@ -698,8 +755,12 @@
 
       var menuToggle = document.getElementById("menuToggle");
       var navLinks = document.getElementById("navLinks");
-      var modal = document.getElementById("bookModal");
-      var form = document.getElementById("inspectionForm");
+      var bookModal = document.getElementById("bookModal");
+      var quoteModal = document.getElementById("quoteModal");
+      
+      var bookForm = document.getElementById("inspectionForm");
+      var quoteForm = document.getElementById("quoteForm");
+      
       var dateInput = document.getElementById("date");
 
       function closeMenu() {
@@ -739,25 +800,38 @@
         dlg.showModal();
       }
 
+      // Bind Book buttons
       document.querySelectorAll("[data-book]").forEach(function (el) {
         el.addEventListener("click", function () {
           closeMenu();
-          safeShow(modal);
+          safeShow(bookModal);
         });
       });
 
-      if (modal) {
-        modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
-        modal.querySelectorAll("[data-close]").forEach(function (b) {
-          b.addEventListener("click", function () { modal.close(); });
+      // Bind Quote buttons
+      document.querySelectorAll("[data-quote]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          closeMenu();
+          safeShow(quoteModal);
         });
-      }
+      });
 
-      if (form) {
-        form.addEventListener("submit", function (e) {
+      // Handle modal closing
+      document.querySelectorAll("dialog").forEach(function (dlg) {
+        dlg.addEventListener("click", function (e) {
+          if (e.target === dlg) dlg.close();
+        });
+        dlg.querySelectorAll("[data-close]").forEach(function (b) {
+          b.addEventListener("click", function () { dlg.close(); });
+        });
+      });
+
+      // Handle Book Form Submit
+      if (bookForm) {
+        bookForm.addEventListener("submit", function (e) {
           e.preventDefault();
-          if (!form.checkValidity()) { form.reportValidity(); return; }
-          var d = new FormData(form);
+          if (!bookForm.checkValidity()) { bookForm.reportValidity(); return; }
+          var d = new FormData(bookForm);
           var msg =
             "Hello DefectFinder Pvt Ltd! I would like to book an inspection.\n\n" +
             "*Name:* " + (d.get("name") || "") + "\n" +
@@ -776,9 +850,35 @@
               'event_label': d.get("inspectionType") || "Unknown"
             });
           }
+          bookForm.reset();
+          bookModal.close();
+        });
+      }
+
+      // Handle Quote Form Submit
+      if (quoteForm) {
+        quoteForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); return; }
+          var d = new FormData(quoteForm);
+          var msg =
+            "Hello DefectFinder Pvt Ltd! I would like to request a quote.\n\n" +
+            "*Name:* " + (d.get("name") || "") + "\n" +
+            "*Phone:* " + (d.get("phone") || "") + "\n" +
+            "*Service Needed:* " + (d.get("service") || "") + "\n" +
+            "*Property Type:* " + (d.get("propertyType") || "") + "\n" +
+            "*Location:* " + (d.get("location") || "") + "\n" +
+            "*Details:* " + (d.get("message") || "No additional details");
+          window.open("https://wa.me/" + BOOKING_WA + "?text=" + encodeURIComponent(msg), "_blank");
           
-          form.reset();
-          modal.close();
+          if (window.gtag) {
+            gtag('event', 'quote_request', {
+              'event_category': 'engagement',
+              'event_label': d.get("service") || "Unknown"
+            });
+          }
+          quoteForm.reset();
+          quoteModal.close();
         });
       }
 

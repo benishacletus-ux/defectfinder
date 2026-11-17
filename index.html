@@ -130,10 +130,14 @@
     .header { background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
     .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .logo-img { height: 56px; width: auto; object-fit: contain; }
-    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links { display: flex; align-items: center; gap: 18px; }
     .nav-links a { color: var(--navy); font-size: 13.5px; font-weight: 500; padding: 8px 0; border-bottom: 2px solid transparent; transition: .25s; }
     .nav-links a:hover, .nav-links a.active { border-color: var(--amber); color: var(--navy); }
-    .nav-cta { padding: 11px 20px; font-size: 13px; }
+    
+    .nav-cta { padding: 10px 16px; font-size: 12.5px; }
+    .nav-cta-quote { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .nav-cta-quote:hover { background: var(--navy); color: #fff; }
+    
     .menu-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--navy); width: 44px; height: 44px; border-radius: 8px; font-size: 22px; cursor: pointer; }
 
     /* ============ HERO ============ */
@@ -527,56 +531,10 @@
     .booking-form .btn { grid-column: 1 / -1; border-radius: 10px; }
     .form-note { grid-column: 1 / -1; text-align: center; font-size: 11px; color: var(--muted); }
 
-    /* ============ NEW DEFECTFINDER SECTIONS ============ */
-    .ul-intro { padding: 70px 0; background: #fff; border-bottom: 1px solid var(--border); }
-    .ul-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .ul-text h2 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-    .ul-text h3 { font-size: 20px; font-weight: 700; color: var(--amber); margin-bottom: 16px; line-height: 1.3; }
-    .ul-text p { font-size: 14px; color: var(--text); line-height: 1.7; margin-bottom: 14px; }
-    .ul-image-wrap { background: #f8fafc; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); padding: 20px; text-align: center; }
-    .ul-image-wrap img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; }
-    
-    .achieve-section { padding: 60px 0; background: #fff; text-align: center; }
-    .achieve-title { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-    .achieve-sub { font-size: 24px; font-weight: 800; color: var(--amber); margin-bottom: 40px; }
-    .achieve-grid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
-    .achieve-item .num { font-size: 48px; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 8px; }
-    .achieve-item .num.dark { color: #000; }
-    .achieve-item .label { font-size: 13px; font-weight: 600; color: var(--text); }
-
-    .choose-section { padding: 70px 0; background: #fff; border-top: 1px solid var(--border); }
-    .choose-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
-    .choose-text h2 { font-size: 26px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
-    .choose-text h2 span { color: var(--amber); }
-    .choose-text p { font-size: 14px; color: var(--text); line-height: 1.7; }
-    
-    .choose-features { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 40px; padding-top: 10px; }
-    .cf-item { display: flex; align-items: center; gap: 14px; border-top: 2px solid var(--border); padding-top: 20px; }
-    .cf-item:nth-child(1) { border-top-color: #3b82f6; }
-    .cf-item:nth-child(2) { border-top-color: #22c55e; }
-    .cf-item .ic { font-size: 26px; color: var(--amber); }
-    .cf-item span { font-size: 14px; font-weight: 700; color: var(--navy); }
-
-    .how-work-section { padding: 70px 0 90px; background: #fff; }
-    .how-work-header { text-align: center; margin-bottom: 40px; }
-    .how-work-header h2 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-    .how-work-header h2 span { color: var(--amber); }
-    .how-work-header p { font-size: 14px; color: var(--muted); max-width: 700px; margin: 0 auto; }
-    
-    .how-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-    .how-work-img img { width: 100%; border-radius: 12px; object-fit: cover; }
-    .how-work-steps { display: flex; flex-direction: column; gap: 24px; }
-    .hw-step { display: flex; gap: 16px; align-items: flex-start; }
-    .hw-icon { color: var(--amber); font-size: 26px; flex-shrink: 0; margin-top: 2px; }
-    .hw-content h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .hw-content p { font-size: 13px; color: var(--text); line-height: 1.6; }
-
     @media (max-width: 1050px) {
       .service-grid { grid-template-columns: repeat(2, 1fr); }
       .why-inner, .process-inner { grid-template-columns: 1fr; }
       .project-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .ul-grid, .choose-grid, .how-work-grid { grid-template-columns: 1fr; }
-      .choose-features { padding-top: 20px; }
     }
     @media (max-width: 860px) {
       .menu-toggle { display: block; }
@@ -584,7 +542,7 @@
       .nav-links.show { display: flex; }
       .nav-links li { width: 100%; }
       .nav-links a { display: inline-block; padding: 12px 0; font-size: 15px; width: 100%; }
-      .nav-cta { width: 100%; justify-content: center; margin-top: 8px; }
+      .nav-cta, .nav-cta-quote { width: 100%; justify-content: center; margin-top: 8px; }
       .services-head { flex-direction: column; align-items: flex-start; }
       .services-head .view-all { display: none; }
       .view-all-mobile { display: block; }
@@ -610,9 +568,6 @@
       .step-num { width: 24px; height: 24px; font-size: 10px; }
       .step h3 { font-size: 13px; }
       .step p { font-size: 10.5px; line-height: 1.4; }
-
-      .achieve-grid { gap: 40px; }
-      .choose-features { grid-template-columns: 1fr; }
     }
     @media (max-width: 620px) {
       .container { width: 92%; }
@@ -628,7 +583,6 @@
       .team-grid { flex-direction: column; align-items: center; }
       .team-card { width: 100%; max-width: 100%; }
       .pc-price-display .amount { font-size: 42px; }
-      .how-work-grid { grid-template-columns: 1fr; }
       .team-photo { width: 130px; height: 130px; border-width: 4px; }
       .tc-icon { width: 120px; height: 120px; font-size: 44px; }
       .tc-icon.blue { width: 52px; height: 52px; font-size: 22px; margin-bottom: 16px; }
@@ -662,10 +616,9 @@
     <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
     <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></symbol>
     <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></symbol>
-    
-    <!-- ADDED SOCIAL ICONS -->
     <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
   </svg>
 
   <header class="header">
@@ -681,6 +634,8 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <!-- ADDED QUOTE BUTTON TO NAV -->
+        <li><button type="button" class="btn nav-cta-quote nav-cta" data-quote><svg class="ic"><use href="#i-file"/></svg> Get a Quote</button></li>
         <li><button type="button" class="btn btn-amber nav-cta" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button></li>
       </ul>
     </div>
@@ -704,7 +659,8 @@
           
           <div class="hero-actions">
             <button type="button" class="btn btn-amber" data-book><svg class="ic"><use href="#i-calendar"/></svg> Book an Inspection</button>
-            <a class="btn btn-outline" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp Our Team</a>
+            <!-- ADDED QUOTE BUTTON TO HERO -->
+            <button type="button" class="btn btn-outline" data-quote><svg class="ic"><use href="#i-file"/></svg> Get a Quote</button>
           </div>
 
           <!-- Hero Service Icons -->
@@ -935,7 +891,7 @@
             <p>Send us your property details and our team will suggest the right service — free of charge.</p>
           </div>
           <div class="b-cta-btn">
-            <a href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20need%20help%20choosing%20the%20right%20inspection." class="btn btn-amber" target="_blank" rel="noopener">Ask on WhatsApp <svg class="ic ic-rotate"><use href="#i-arrow"/></svg></a>
+            <button type="button" class="btn btn-amber" data-quote>Get a Quote <svg class="ic ic-rotate"><use href="#i-arrow"/></svg></button>
           </div>
         </div>
       </div>
@@ -1116,7 +1072,6 @@
           </a>
           <p>Independent property inspection, home renovation, and expert advice for NRI and local property owners in Dubai and Hyderabad.</p>
           
-          <!-- ADDED SOCIAL ICONS -->
           <div class="footer-social">
             <a href="https://www.facebook.com/share/1EiNXnGqri/" target="_blank" rel="noopener" class="fb" aria-label="DefectFinder on Facebook" title="Facebook">
               <svg class="ic" aria-hidden="true"><use href="#i-facebook"/></svg>
@@ -1162,6 +1117,7 @@
     <a class="fab wa" href="https://wa.me/971559610399?text=Hello%20DefectFinder!%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ic"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
   </div>
 
+  <!-- BOOKING MODAL -->
   <dialog id="bookModal" aria-labelledby="bookTitle">
     <div class="modal-head">
       <div>
@@ -1210,6 +1166,55 @@
     </form>
   </dialog>
 
+  <!-- NEW QUOTE MODAL -->
+  <dialog id="quoteModal" aria-labelledby="quoteTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="quoteTitle">Get a Quote</h3>
+        <p>Tell us what you need and we'll send you a custom quote via WhatsApp.</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+    </div>
+    <form class="booking-form" id="quoteForm">
+      <div class="form-group"><label for="q-name">Full Name *</label><input type="text" id="q-name" name="name" placeholder="Enter your full name" required autocomplete="name"></div>
+      <div class="form-group"><label for="q-phone">Phone Number *</label><input type="tel" id="q-phone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}"></div>
+      
+      <div class="form-group">
+        <label for="q-property">Property Type *</label>
+        <select id="q-property" name="propertyType" required>
+          <option value="">Select property type</option>
+          <option value="2 BHK">2 BHK</option>
+          <option value="3 BHK">3 BHK</option>
+          <option value="4 BHK / Villa">4 BHK / Villa</option>
+          <option value="Commercial Property">Commercial Property</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group full"><label for="q-location">Property Location *</label><input type="text" id="q-location" name="location" placeholder="Enter exact property location (e.g. Dubai, Hyderabad)" required autocomplete="address-level2"></div>
+      
+      <div class="form-group full">
+        <label for="q-service">What do you need a quote for? *</label>
+        <select id="q-service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Home Inspection">Home Inspection</option>
+          <option value="Building Defect Report">Building Defect Report</option>
+          <option value="Water Leak Detection">Water Leak Detection</option>
+          <option value="Electrical Inspection">Electrical Inspection</option>
+          <option value="Plumbing Inspection">Plumbing Inspection</option>
+          <option value="New Flat Handover Inspection">New Flat Handover Inspection</option>
+          <option value="Home Renovation">Home Renovation</option>
+          <option value="Other / Not Sure">Other / Not Sure</option>
+        </select>
+      </div>
+
+      <div class="form-group full"><label for="q-message">Details / Specific Requirements</label><textarea id="q-message" name="message" rows="3" placeholder="Please provide any specific details so we can give you an accurate quote..."></textarea></div>
+      
+      <button type="submit" class="btn btn-amber">Request Quote via WhatsApp <svg class="ic"><use href="#i-arrow"/></svg></button>
+      <p class="form-note">Your information will be used only to respond to your enquiry.</p>
+    </form>
+  </dialog>
+
   <script>
     (function () {
       "use strict";
@@ -1219,7 +1224,11 @@
       var menuToggle = document.getElementById("menuToggle");
       var navLinks = document.getElementById("navLinks");
       var bookModal = document.getElementById("bookModal");
-      var form = document.getElementById("inspectionForm");
+      var quoteModal = document.getElementById("quoteModal");
+      
+      var bookForm = document.getElementById("inspectionForm");
+      var quoteForm = document.getElementById("quoteForm");
+      
       var serviceSel = document.getElementById("inspectionType");
       var propertySel = document.getElementById("propertyType");
       var dateInput = document.getElementById("date");
@@ -1263,12 +1272,26 @@
         safeShow(bookModal);
       }
 
+      function openQuote() {
+        closeMenu();
+        safeShow(quoteModal);
+      }
+
+      // Bind Book buttons
       document.querySelectorAll("[data-book]").forEach(function (el) {
         el.addEventListener("click", function () {
           openBooking(el.dataset.service, el.dataset.size);
         });
       });
 
+      // Bind Quote buttons
+      document.querySelectorAll("[data-quote]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          openQuote();
+        });
+      });
+
+      // Handle modal closing (clicking backdrop or close button)
       document.querySelectorAll("dialog").forEach(function (dlg) {
         dlg.addEventListener("click", function (e) {
           if (e.target === dlg) dlg.close();
@@ -1278,14 +1301,12 @@
         });
       });
 
-      if (form) {
-        form.addEventListener("submit", function (e) {
+      // Handle Book Form Submit
+      if (bookForm) {
+        bookForm.addEventListener("submit", function (e) {
           e.preventDefault();
-          if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-          }
-          var d = new FormData(form);
+          if (!bookForm.checkValidity()) { bookForm.reportValidity(); return; }
+          var d = new FormData(bookForm);
           var msg =
             "Hello DefectFinder Pvt Ltd! I would like to book an inspection.\n\n" +
             "*Name:* " + (d.get("name") || "") + "\n" +
@@ -1304,12 +1325,39 @@
               'event_label': d.get("inspectionType") || "Unknown"
             });
           }
-          
-          form.reset();
+          bookForm.reset();
           bookModal.close();
         });
       }
 
+      // Handle Quote Form Submit
+      if (quoteForm) {
+        quoteForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); return; }
+          var d = new FormData(quoteForm);
+          var msg =
+            "Hello DefectFinder Pvt Ltd! I would like to request a quote.\n\n" +
+            "*Name:* " + (d.get("name") || "") + "\n" +
+            "*Phone:* " + (d.get("phone") || "") + "\n" +
+            "*Service Needed:* " + (d.get("service") || "") + "\n" +
+            "*Property Type:* " + (d.get("propertyType") || "") + "\n" +
+            "*Location:* " + (d.get("location") || "") + "\n" +
+            "*Details:* " + (d.get("message") || "No additional details");
+          window.open("https://wa.me/" + BOOKING_WA + "?text=" + encodeURIComponent(msg), "_blank");
+          
+          if (window.gtag) {
+            gtag('event', 'quote_request', {
+              'event_category': 'engagement',
+              'event_label': d.get("service") || "Unknown"
+            });
+          }
+          quoteForm.reset();
+          quoteModal.close();
+        });
+      }
+
+      // Pricing Tab Logic
       var PRICES = { "2 BHK": "7,999", "3 BHK": "9,999", "4 BHK / Villa": "14,999" };
       var tabs = document.querySelectorAll(".pc-tab");
       var rows = document.querySelectorAll(".pc-list-item");
